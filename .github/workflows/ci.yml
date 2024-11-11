@@ -20,4 +20,7 @@ jobs:
           path: .cache
       - run: pip install mkdocs-material
       - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs build # 生成站点文件
+      - run: git add -A # 将站点内容加入 Git 暂存区
+      - run: git commit -m "Deploy site to main branch" || echo "No changes to commit" # 提交更改
+      - run: git push origin main # 推送到 main 分支
