@@ -1,30 +1,45 @@
 site_name: My Blog - Tenax
 theme:
   name: material
+  font:
+    text: Inter
+    code: Roboto Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
   features:
+    - navigation.top
     - navigation.tabs
     - navigation.sections
+    - navigation.footer
     - toc.integrate
-    - navigation.top
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
+
   language: zh
+  
   palette:
+    #Light Mode
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/lightbulb-outline
         name: Switch to dark mode
-      primary: teal
-      accent: purple
+      primary: green
+      accent: green
+
+    #Dark Mode
     - scheme: slate
       toggle:
-        icon: material/toggle-switch
+        icon: material/lightbulb
         name: Switch to light mode
-      primary: teal
-      accent: lime
+      primary: black
+      accent: deep purple
+
+nav:
+  - Blog:
+      - blog/posts/Material_for_MkDocs_configuration_and_deployment.md
 
 extra:
   social:
@@ -32,21 +47,42 @@ extra:
       link: http://gitlab.code-nav.cn/Tenax
 
 markdown_extensions:
+
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
   - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.mark
   - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
 
-copyright: |
-  &copy; 2024 <a href="http://gitlab.code-nav.cn/Tenax"  target="_blank" rel="noopener">Tenax</a>
+  - pymdownx.snippets
+
+  - pymdownx.arithmatex:
+      generic: true
+
+  - footnotes
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+
+
+copyright: Copyright &copy; 2024 <a href="http://gitlab.code-nav.cn/Tenax"  target="_blank" rel="noopener">Tenax</a>
+
+extra_css:
+  - stylesheets/extra.css
