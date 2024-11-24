@@ -7,22 +7,29 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.ico
   features:
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
+    - navigation.indexes
+    - navigation.tracking
+    - search.share
     - navigation.top
     - navigation.tabs
     - navigation.sections
     - navigation.footer
-    - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotate
     - content.code.copy
+    - toc.follow
 
   language: zh
-  
+
   palette:
     #Light Mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: material/lightbulb-outline
         name: Switch to dark mode
@@ -30,16 +37,32 @@ theme:
       accent: green
 
     #Dark Mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/lightbulb
         name: Switch to light mode
       primary: black
       accent: deep purple
 
+plugins:
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_url_format: "{slug}"
+  - glightbox
+  - minify:
+      minify_html: true
+  - privacy
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - tags
+
+
 nav:
   - Blog:
       - blog/posts/Material_for_MkDocs_configuration_and_deployment.md
+      - blog/posts/Xiaomi AX3000T Brush with ImmortalWrt and U-Boot.md
 
 extra:
   social:
@@ -76,9 +99,10 @@ markdown_extensions:
       generic: true
 
   - footnotes
+  - md_in_html
 
-  - pymdownx.tabbed:
-      alternate_style: true
+  # - pymdownx.tabbed:
+  #     alternate_style: true
 
 
 
