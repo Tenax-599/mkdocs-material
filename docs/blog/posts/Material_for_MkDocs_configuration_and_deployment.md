@@ -5,7 +5,7 @@ description: >
   This is some notes I made when I was using Material for MkDocs for my blog I posted it to organise and share it with you!
 ---
 
-# 如何用Material for MkDocs搭建一个属于你的博客
+# 如何用 Material for MkDocs 搭建一个属于你的博客
 
 ## 运行 Material for MkDocs
 
@@ -157,40 +157,40 @@ copyright: Copyright &copy; 2024 <a href="http://gitlab.code-nav.cn/Tenax"  targ
 - **theme**:
 
       - **名字**：`material` 。
-      
+
       - **字体**：文本使用 `Inter`字体，代码使用 `Roboto Mono`字体。
-      
+
       - **图标**：`assets/logo.png` 作为网站 Logo，`assets/favicon.ico` 作为网站图标。
-      
+
       - **主题特色**：
-      
+
         **`navigation.top`**
         启用 **顶部导航**，即导航栏会固定在页面顶部。当你滚动页面时，导航栏将保持在屏幕顶部，便于快速跳转到其他页面。
-      
+
         **`navigation.tabs`**
         启用 **标签式导航**，允许在同一页面中使用多个标签（Tab）来组织内容。例如，在展示代码块或长内容时，可以使用标签区分不同的部分。
-      
+
         **`navigation.sections`**
         启用 **分区导航**，在页面侧边栏显示该页面的章节目录。这有助于用户快速导航到页面中的特定部分，尤其是长篇文章。
-      
+
         **`navigation.footer`**
         启用 **页脚导航**，在页面底部显示链接或其他信息。常用于提供版权信息、联系链接或额外的导航选项。
-      
+
         **`toc.integrate`**
         启用 **目录集成**，使得文章中的目录（Table of Contents, TOC）会自动生成，并且可以在页面侧边栏或页面顶部显示，帮助用户更容易地浏览长文章。
-      
+
         **`search.suggest`**
         启用 **搜索建议**，在用户输入搜索关键词时，自动显示相关的搜索建议，帮助用户更快速地找到相关内容。
-      
+
         **`search.highlight`**
         启用 **搜索高亮**，在搜索结果中高亮显示匹配的关键词，用户可以更直观地看到搜索结果中的重点内容。
-      
+
         **`content.tabs.link`**
         启用 **内容标签链接**，为页面中的每个标签提供链接，使得用户能够直接通过链接跳转到页面的特定标签内容。
-      
+
         **`content.code.annotate`**
         启用 **代码注释**，在代码块中提供额外的注释功能，使得代码示例更易于理解。通常可以通过 `py`、`js` 等语言标记代码并为其添加注释。
-      
+
         **`content.code.copy`**
         启用 **代码复制功能**，用户可以一键复制代码块中的内容。这对分享代码非常方便，提升用户体验。
 
@@ -229,11 +229,11 @@ copyright: Copyright &copy; 2024 <a href="http://gitlab.code-nav.cn/Tenax"  targ
 ??? tip "提示"
 
     1 . 更多字体样式请查看[谷歌字体](https://fonts.google.com/)
-    
+
     2 . 更多设置，比如按时间来自动调整深色模式还是浅色模式，设置后退和前进箭头等更多细节请查看Material for Mkdocs的[官方文档](https://squidfunk.github.io/mkdocs-material/)
-    
+
     3 . 更多疑问请结合Mkdocs[官方文档](https://mkdocs.readthedocs.io/)
-    
+
     4 . 网站LOGO和网站图标我分别使用[Favicon](https://favicon.io/)和[Realfavicongenerator](https://realfavicongenerator.net/)两个网站
 
 ---
@@ -659,9 +659,7 @@ git push origin main
 
 把 settings.json 中的`"redhat.telemetry.enabled":`选项改为 ture，并将`"yaml.schemas"`和`"yaml.customTags"`选项改为（或补充）以上代码
 
-<p>
-  <img class="center" alt="4.avif" src="../../../assets/init_blog/4.avif">
-</p>
+![4.avif](../../assets/init_blog/4.avif)
 
 在 mkdocs.yml 文件中，当我们将鼠标悬停在配置文件中的 Mkdocs 的选项上，会有相关的 Mkdocs 提示
 
