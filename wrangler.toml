@@ -1,0 +1,2 @@
+[build]
+command = "pip install mkdocs-material mkdocs-minify-plugin mkdocs-glightbox && mkdocs build"
