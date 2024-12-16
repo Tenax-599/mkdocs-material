@@ -1,6 +1,7 @@
 site_name: My Blog - Tenax
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Inter
     code: Roboto Mono
@@ -14,7 +15,7 @@ theme:
     - navigation.tracking
     - search.share
     - navigation.top
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.sections
     - navigation.footer
     - search.suggest
@@ -47,8 +48,8 @@ theme:
 
 plugins:
   - blog:
-      blog_dir: blog
-      blog_toc: true
+      blog_dir: .
+      # blog_toc: true
       post_url_format: "{slug}"
   - glightbox
   - minify:
@@ -56,13 +57,26 @@ plugins:
   - privacy
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - tags
+  - tags:
+      tags_file: tags.md
+  - git-committers:
+      enabled: true
+      repository: Tenax-599/mkdocs-material
+      branch: main
+      token: !ENV GH_TOKEN
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
 
+hooks:
+  - hooks/socialmedia.py
 
-nav:
-  - Blog:
-      - blog/posts/Material_for_MkDocs_configuration_and_deployment.md
-      - blog/posts/Xiaomi AX3000T Brush with ImmortalWrt and U-Boot.md
+# nav:
+#   - Blog:
+#       - blog/posts/Material_for_MkDocs_configuration_and_deployment.md
+#       - blog/posts/Xiaomi AX3000T Brush with ImmortalWrt and U-Boot.md
 
 extra:
   social:

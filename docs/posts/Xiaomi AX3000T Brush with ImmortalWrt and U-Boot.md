@@ -1,11 +1,16 @@
 ---
-date: 2024-11-17
+date:
+  created: 2024-11-17
+tags:
+  - Router
 authors: [Tenax]
 description: >
   Xiaomi AX3000T Brush with ImmortalWrt and U-Boot
 ---
 
 # 小米 AX3000T 刷机 ImmortalWrt 和 U-Boot
+
+<!-- more -->
 
 ## 启用 SSH 权限
 

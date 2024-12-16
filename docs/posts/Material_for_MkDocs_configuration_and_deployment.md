@@ -1,11 +1,16 @@
 ---
-date: 2024-11-17
+date:
+  created: 2024-11-17
+tags:
+  - Blog
 authors: [Tenax]
 description: >
   This is some notes I made when I was using Material for MkDocs for my blog I posted it to organise and share it with you!
 ---
 
 # 如何用 Material for MkDocs 搭建一个属于你的博客
+
+<!-- more -->
 
 ## 运行 Material for MkDocs
 
