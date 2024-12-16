@@ -58,17 +58,17 @@ mtd write /tmp/mt7981_ax3000t-fip-fixed-parts-multi-layout.bin FIP
 
 在浏览器中访问 [http://192.168.1.1](http://192.168.1.1/) 进入 U-Boot 的网页刷机界面，此处抛弃小米原有的 stock layout，直接选用 immortalwrt-112m layout，然后上传固件确认升级即可。
 
-![3](../../assets/router/3.avif)
+![3](../assets/router/3.avif)
 
-![4](../../assets/router/4.avif)
+![4](../assets/router/4.avif)
 
-![5](../../assets/router/5.avif)
+![5](../assets/router/5.avif)
 
-![6](../../assets/router/6.avif)
+![6](../assets/router/6.avif)
 
-![7](../../assets/router/7.avif)
+![7](../assets/router/7.avif)
 
-![8](../../assets/router/8.avif)
+![8](../assets/router/8.avif)
 
 ## ImmortalWrt 固件/U-Boot 下载下载
 
