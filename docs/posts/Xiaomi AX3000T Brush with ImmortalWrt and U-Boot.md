@@ -40,11 +40,11 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok={替换成你的stok}/api/xq
 
 使用 WinSCP 连接路由器（WinSCP 图形化界面更适合小白）
 
-![1](../../assets/router/1.avif)
+![1](../assets/router/1.avif)
 
 开启 SSH 后会生成一些原厂分区信息
 
-![2](../../assets/router/2.avif)
+![2](../assets/router/2.avif)
 
 ## 刷入
 
