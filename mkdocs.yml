@@ -1,5 +1,5 @@
-site_url: https://a53d90dd.tenax-756.pages.dev
 site_name: My Blog - Tenax
+site_url: https://a53d90dd.tenax-756.pages.dev
 theme:
   name: material
   custom_dir: overrides
@@ -50,12 +50,14 @@ theme:
 plugins:
   - blog:
       blog_dir: .
-      # blog_toc: true
+      blog_toc: true
       post_url_format: "{slug}"
   - glightbox
   - minify:
       minify_html: true
-  - privacy
+
+  # - privacy // Conflict with giscus
+
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - tags:
@@ -71,8 +73,8 @@ plugins:
       enable_creation_date: true
       enabled: true
 
-hooks:
-  - hooks/socialmedia.py
+# hooks:
+#   - hooks/socialmedia.py
 
 # nav:
 #   - Blog:
@@ -122,6 +124,3 @@ markdown_extensions:
 
 
 copyright: Copyright &copy; 2024 <a href="http://gitlab.code-nav.cn/Tenax"  target="_blank" rel="noopener">Tenax</a>
-
-extra_css:
-  - stylesheets/extra.css
