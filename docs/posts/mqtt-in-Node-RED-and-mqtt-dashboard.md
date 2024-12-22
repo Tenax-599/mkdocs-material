@@ -272,8 +272,6 @@ function : (error)
 
 **参考：**
 
-[MQTT in Node RED: Building a Dashboard and Logging Data](https://www.youtube.com/watch?v=TNHAZxwB-9o)
-
 [MQTT in Nodered | Building MQTT Dashboard](https://highvoltages.co/iot-internet-of-things/mqtt/mqtt-in-nodered-and-mqtt-dashboard/)
 
 [https://flows.nodered.org/node/node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)
