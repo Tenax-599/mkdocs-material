@@ -11,3 +11,7 @@ source venv/scripts/activate
 ```bash
 mkdocs serve
 ```
+
+```bash
+mogrify -format avif *.png
+```

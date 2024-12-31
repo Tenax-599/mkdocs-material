@@ -121,6 +121,12 @@ markdown_extensions:
   # - pymdownx.tabbed:
   #     alternate_style: true
 
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
 copyright: Copyright &copy; 2024 <a href="http://gitlab.code-nav.cn/Tenax"  target="_blank" rel="noopener">Tenax</a>
