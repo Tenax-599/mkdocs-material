@@ -81,6 +81,12 @@ plugins:
 #       - blog/posts/Material_for_MkDocs_configuration_and_deployment.md
 #       - blog/posts/Xiaomi AX3000T Brush with ImmortalWrt and U-Boot.md
 
+edit_uri: https://github.com/Tenax-599/mkdocs-material/tree/main/docs
+
+repo_url: https://github.com/Tenax-599/mkdocs-material/tree/main/docs
+
+repo_name: Tenax-599/mkdocs-material
+
 extra:
   social:
     - icon: fontawesome/brands/gitlab
