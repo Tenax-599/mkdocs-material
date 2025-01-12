@@ -243,7 +243,7 @@ bnez x1,loop = bne x1, x0, loop
 
 bne 属于 SB-type
 
-| 12 bits         | 5 bits | 5 bits | 3 bits | 5 bits         | 7bits   |
+| 6 bits          | 5 bits | 5 bits | 3 bits | 5 bits         | 7bits   |
 | :-------------- | ------ | ------ | ------ | -------------- | ------- |
 | imm[12 \| 10:5] | rs2    | rs1    | funct  | imm[4:1 \| 11] | 1100011 |
 

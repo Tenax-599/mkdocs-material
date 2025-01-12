@@ -5,10 +5,10 @@ tags:
   - Rust Course
 authors: [Tenax]
 description: >
-  Rust Course Chapter 1: Learning the Basics of the Rust Language Section 2.1 ~ 2.2 Notes
+  Rust Course Chapter 2: Learning the Basics of the Rust Language Section 2.1 ~ 2.2 Notes
 ---
 
-# Rust 语言圣经(Rust Course) 第一章 Rust 语言基础学习II
+# Rust 语言圣经(Rust Course) 第二章 Rust 语言基础学习I
 
 _<!-- more -->_
 
@@ -155,7 +155,7 @@ fn main() {
 - 函数没有返回值，那么返回一个 `()`
 - 通过 `;` 结尾的语句返回一个 `()`
 
-##### [永不返回的发散函数 `!`](https://course.rs/basic/base-type/function.html#永不返回的发散函数-)
+### [永不返回的发散函数 `!`](https://course.rs/basic/base-type/function.html#永不返回的发散函数-)
 
 当用 `!` 作函数返回类型的时候，表示该函数永不返回( diverge function )，特别的，这种语法往往用做会导致程序崩溃的函数：
 
