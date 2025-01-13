@@ -136,7 +136,7 @@ extra_javascript:
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra_css:
-  # - stylesheets/extra.css
+  - stylesheets/extra.css
   - https://unpkg.com/katex@0/dist/katex.min.css
 
 copyright: Copyright &copy; 2025 <a href="http://gitlab.code-nav.cn/Tenax"  target="_blank" rel="noopener">Tenax</a>
