@@ -55,6 +55,8 @@ plugins:
   - glightbox
   - minify:
       minify_html: true
+  - blog:
+      draft: true
 
   # - privacy // Conflict with giscus
 
