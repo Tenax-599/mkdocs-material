@@ -57,6 +57,7 @@ plugins:
       minify_html: true
   - blog:
       draft: true
+      draft_on_serve: true
 
   # - privacy // Conflict with giscus
 
