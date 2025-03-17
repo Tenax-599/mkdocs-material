@@ -10,6 +10,8 @@ description: >
 
 # Linux SysAdmin DeCal
 
+<!-- more -->
+
 来自 UCB 的一门讲解 Linux 的入门课程，比起定位相同的 MIT 的公开课 Missing Semester，Decal 讲解得更加系统、也更加清晰，这也是我推荐它的主要原因。比起 Missing Semester 更像是给已经开始编程但没有系统使用过这些工具的学生的查缺补漏，DeCal 更像是面向零基础的同学的课程。一共十二周的课程内容，包括 Linux 基础、shell 编程（还有 tmux 、vim）、包管理、服务(Services)、基础计算机网络、网络服务、安全(密钥管理)、Git、Docker、Kubernetes、Puppet 和 CUDA。 十分适合新手了解和入门 Linux 环境相关内容。
 
 美中不足的是部分课程作业需要在远程服务器操作，比如关于 ssh 的练习，需要 UCB 内部账号访问。但是大部分作业可以通过自己搭建的虚拟机 + 使用 Xshell 等工具或者直接使用 Linux 桌面版来操作练习，在听完完整课程和做完作业后，相信已经对 Linux 有最基本的了解了。
@@ -728,7 +730,7 @@ neofetch
 # ls  # cd  # ls -a  # vim :wq  # cat  # htop  # man htop
 ```
 
-![shell-demo1](../assets/SysAdmin-DeCal/shell-demo1.jpg)
+![shell-demo1](../assets/SysAdmin-DeCal/shell-demo1.avif)
 
 **Editors**
 
@@ -737,11 +739,11 @@ neofetch
 - Emacs(Emacs Tutorial)
 - (NotePad)
 
-Try running `(editor of choice)(file)`{not  notepad }
+Try running `(editor of choice)(file)`{not notepad }
 
 **Shell Commands**
 
-- Basic structure of a command is 
+- Basic structure of a command is
 
 `[command][flags][arguments]`
 
@@ -785,29 +787,25 @@ grep -B 2 "http" big_data.txt
 chmod +x a_script
 ```
 
-
-
 ## [UNIX](https://www.bilibili.com/video/BV1Ry421B7Js)
 
 ## Evolution of UNIX
 
-![Unix_history-simple](../assets/SysAdmin-DeCal/Unix_history-simple.svg.png)
+![Unix_history-simple](../assets/SysAdmin-DeCal/Unix_history-simple.svg.avif)
 
 **OSS Licenses:Legal Jiggery-Pokery**
 
 - Copyleft(GPL)
 
-   - "I want to make sure that all versions of GNU remain free." - Stallman(GNU Manifesto)
+  - "I want to make sure that all versions of GNU remain free." - Stallman(GNU Manifesto)
 
-   - "a cancer that attaches itself in an intellectual property sense to everything it touches" - Steve Ballmer
+  - "a cancer that attaches itself in an intellectual property sense to everything it touches" - Steve Ballmer
 
 - Permissive(MIT，BSD，Apache，WTFPL)
 
-   - Do whatever you want(basically)
+  - Do whatever you want(basically)
 
 - [choosealicense.com/licenses]()
-
-
 
 ---
 
