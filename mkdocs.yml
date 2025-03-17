@@ -52,6 +52,7 @@ plugins:
       blog_dir: .
       blog_toc: true
       post_url_format: "{slug}"
+      pagination: false
   - glightbox
   - minify:
       minify_html: true
