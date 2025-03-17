@@ -35,9 +35,9 @@ namespace HelloWorld
 ??? info "如何知道类是那个命名空间呢？"
 
      有两种方法：
-    
+
      1.通过文档，visual studio中上方有help选项，View Help就是文档
-    
+
      2.通过智能提示，liner中可以选择是通过using加入命名空间，还是在类前面加上命名空间。（加入命名空间快捷键为ctrl + .）
 
 ### 类库引用-黑盒引用和白盒引用
@@ -55,15 +55,15 @@ namespace HelloWorld
 - 对象也叫实例，是类经过"实例化"后得到的内存中的实体
 
       Formally"instance”is synonymous with"object"一一对象和实例是一回事
-        
+
       "飞机"与"一架飞机"有何区别？天上有（一架）飞机一一必需是实例飞，概念是不能飞的
-        
+
       有些类是不能实例化的，比如"数学”（Math class），我们不能说“一个数学
 
 - 依照类，我们门可以创建对象，这就是“实例化
 
       现实世界中常称"对象”，程序世界中常称"实例”
-        
+
       二者并无太大区别，常常混用，初学者不必迷惑
 
 - 使用 new 操作符创建类的实例
@@ -71,9 +71,9 @@ namespace HelloWorld
 - 引用变量与实例的关系
 
       孩子与气球
-      
+
       气球不一定有孩子牵着
-      
+
       多个孩子可以使用各自的绳子牵着同一个气球，也可以都通过一根绳子牵着气球
 
 ```c#
@@ -106,13 +106,13 @@ namespace ClassAndInstance
 - 方法（Method）
 
       由 C 语言中的函数（function）进化而来，表示类或对象“能做什么”
-        
+
       工作中 90%的时间是在与方法打交道，因为它是“真正做事”、“构成逻辑“的成员
 
 - 事件（Event）
 
       类或对象通知其它类或对象的机制，为 C#所特有（Java 通过其它办法实现这个机制）
-        
+
       善用事件机制非常重要
 
 - 使用 MSDN 文档（鼠标移到某个类上，按下 F1）
@@ -120,9 +120,9 @@ namespace ClassAndInstance
 - 某些特殊类或对象在成员方面侧重点不同
 
       模型类或对象重在属性，如 Entity Framework
-      
+
       工具类或对象重在方法，如 Math，Console
-      
+
       通知类或对象重在事件，如各种 Timer
 
 ### 类的成员-属性类方法类事件类
@@ -281,13 +281,13 @@ namespace IdentifiersExample
 - 变量是存放数据的地方，简称“数据
 
       变量的声明
-        
+
       变量的使用
 
 - 方法（旧称函数）是处理数据的逻辑，又称"算法
 
       方法白声明
-        
+
       方法的调用
 
 - 程序=数据+算法
@@ -978,7 +978,7 @@ namespace ConstructorExample
             Student stu2 = new Student();
         }
     }
-    
+
     class Student
     {
         public Student(int initId, string initName)
@@ -986,13 +986,13 @@ namespace ConstructorExample
             this.ID = initId;
             this.Name = initName;
         }
-        
+
         public Student()
         {
             this.ID = 1;
             this.Name = "No name";
         }
-        
+
         public int ID;
         public string Name;
     }
@@ -1011,7 +1011,7 @@ namespace constructorExample
             Student stu = new Student();
         }
     }
-    
+
     class Student
     {
         public int ID;
@@ -1019,6 +1019,7 @@ namespace constructorExample
     }
 }
 ```
+
 ![8.avif](../assets/Csharp/8.avif)
 
 ```c#
@@ -1032,7 +1033,7 @@ namespace constructorExample
             Console.WriteLine(stu.Name == null);
         }
     }
-    
+
     class Student
     {
         public int ID;
@@ -1055,19 +1056,19 @@ namespace OverloadExample
             Calculator c = new Calculator();
         }
     }
-    
+
     class Calculator
     {
         public int Add(int a,int b)
         {
             return a + b;
         }
-        
+
         public int Add(int a, int b, int c)
         {
             return a + b + c;
         }
-        
+
         public double Add(double a, double b)
         {
             return a + b;
@@ -1078,15 +1079,15 @@ namespace OverloadExample
 
 ### 调试-StepIn-StepOut-StepOver-CallStack
 
-StepInto进入正在被调用的函数里面看看具体怎么回事 
+StepInto 进入正在被调用的函数里面看看具体怎么回事
 
-StepOver不走进这个方法
+StepOver 不走进这个方法
 
-StepOut不走进这个方法，直接跳出到调用自身方法的方法中
+StepOut 不走进这个方法，直接跳出到调用自身方法的方法中
 
 ### 调用栈
 
-stack frame表示方法被调用后在栈内存中的布局
+stack frame 表示方法被调用后在栈内存中的布局
 
 ```c#
 namespace CSharpMethodExample
@@ -1139,8 +1140,8 @@ namespace CSharpMethodExample
 
 **操作符的本质是函数（即算法）的"简记法**
 
-- 假如没有发明"+"、只有Add函数，算式3+4+5将可以写成Add(Add(3,4),5)
-- 假如没有发明"×"、只有Mul函数，那么算式3+4×5将只能写成Add(3,Mu(4,5))，注意优先级
+- 假如没有发明"+"、只有 Add 函数，算式 3+4+5 将可以写成 Add(Add(3,4),5)
+- 假如没有发明"×"、只有 Mul 函数，那么算式 3+4×5 将只能写成 Add(3,Mu(4,5))，注意优先级
 
 **操作符不能脱离与它关联的数据类型**
 
@@ -1212,14 +1213,14 @@ namespace OperatorPriority
 
 - 可以使用圆括号提高被括起来表达式的优先级
 - 圆括号可以嵌套
-- 不像数学里有方括号和花括号，在C#语言里”[]“与“{}“有专门的用途
+- 不像数学里有方括号和花括号，在 C#语言里”[]“与“{}“有专门的用途
 
 同优先级操作符的运算顺序
 
 - 除了带有赋值功能的操作符，同优先级操作符都是由左向右进行运算
 - 带有赋值功能的操作符的运算顺序是由右向左
 - 与数学运算不同，计算机语言的同优先级运算没有“结合率
-    - 3+4+5只能理解为Add(Add(3,4),5)不能理解为Add(3,Add(4,5)
+  - 3+4+5 只能理解为 Add(Add(3,4),5)不能理解为 Add(3,Add(4,5)
 
 ### 基本运算操作符
 
@@ -1235,7 +1236,7 @@ namespace OperatorsExample
         static void Main(string[] args)
         {
             System.IO.File.Create("D:\\HelloWorld.txt");
-            
+
             Form myForm = new Form();
             myForm.Text = "Hello, World!"; // 访问实例成员（属性）
             myForm.ShowDialog(); // 访问方法
@@ -1257,21 +1258,21 @@ namespace OperatorsExample
         {
             Calculator c = new Calculator();
             double x = c.Add(3.0, 5.0);
-            
+
             c.PrintHello();
-            
+
             Action myAction = new Action(c.PrintHello); //访问c.PrintHello这个成员，把这个成员的名字交给myAciton
             myAction();
         }
     }
-    
+
     class Calculator
     {
         public double Add(double a, double b)
         {
             return a + b;
         }
-        
+
         public void PrintHello()
         {
            Console.WriteLine("Hello")
@@ -1292,7 +1293,7 @@ namespace OpratorsExample
         static void Main(string[] args)
         {
             // int[] myIntArray = new int[10];
-            
+
             Dicitionary<string, Student> stuDic = new Dictionary<string, Student>();
             for(int i = 1; i <= 100; i++)
             {
@@ -1301,7 +1302,7 @@ namespace OpratorsExample
                 stu.Score = 100 + i;
                 stuDic.Add(stu.Name, stu);
             }
-            
+
             Student number6 = stuDic["s_6"];
             Console.WriteLine(number6.Score);
         }
@@ -1322,7 +1323,7 @@ namespace OpreatorsExample
         {
             int x = 100;
             int y = x++;
-            // int y = x; 
+            // int y = x;
             // x = x + 1;
             int y = x--;
             // int y = x;
@@ -1377,17 +1378,17 @@ namespace OperatorsExample
             Console.WriteLine(level); // Mid,赋了值就是Low，没有0返回0
         }
     }
-    
+
     enum Level
     {
         // Mid = 2,
         // Low = 1,
         // High = 3
-        
+
         // Mid = 0,
         // Low = 1,
         // High = 2
-        
+
         Mid,
         Low,
         High
@@ -1406,19 +1407,19 @@ namespace OperatorsExample
         {
             // Form myForm = new Form();
             // myForm.Text = "Hello";
-            
+
             // Form myForm = new Form(){Text = "Hello", FormBorderStyle = FormBorderStyle.SizableToolWindow};
             // myForm.ShowDialog();
-            
+
             // new Form(){Text = "Hello"}.ShowDialog();
-            
+
             // int x = 100;
             // string name = "Tim";
             // string name = new string();
-            
+
             //int[] myArray = new int[10];
             //int[] myArray = {1,2,3,4};
-            
+
             Form myForm = new Form(){Text = "Hello"};
             var person = new {Name = "Mr.Okay", Age = 34}; //是为匿名类型创建对象并且用隐式类型变量来引用这个实例
             Console.WriteLine(person.Name); // Mr.Okay
@@ -1431,9 +1432,9 @@ namespace OperatorsExample
 
 `new`操作符的主要功能是帮助我们在内存当中创建类型的实例，立刻调用它的实例构造器，如果在`new`操作符的左边有赋值符号的话，`new`操作符会把自己拿到的实例的内存地址通过赋值操作符交给负责访问这个实例的变量；`new`操作符除了能调用这个实例的构造器之外，还能去调用这个实例的初始化器
 
-只要我想在内存当中创建类型的实例，就要去调用`new`操作符？并不是这样比如说`string`，它是一个类类型，类类型在创建实例的时候要使用`new`操作符，平时使用比如`string name = "Tim";`就不用调用`new`操作符，为什么呢，这个叫做C#语言的语法糖衣，string类型是一个非常基本的类型，微软为了统一基本类型使用时候的基本体验，它把`new`操作符隐藏起来了；`int[] myArray = {1,2,3,4};`也没用到`new`操作符，这也是一个语法糖衣，在创建某些类型的实例的时候我们可以选择使用`new`操作符或者不使用`new`操作符
+只要我想在内存当中创建类型的实例，就要去调用`new`操作符？并不是这样比如说`string`，它是一个类类型，类类型在创建实例的时候要使用`new`操作符，平时使用比如`string name = "Tim";`就不用调用`new`操作符，为什么呢，这个叫做 C#语言的语法糖衣，string 类型是一个非常基本的类型，微软为了统一基本类型使用时候的基本体验，它把`new`操作符隐藏起来了；`int[] myArray = {1,2,3,4};`也没用到`new`操作符，这也是一个语法糖衣，在创建某些类型的实例的时候我们可以选择使用`new`操作符或者不使用`new`操作符
 
-<u><>f_AnonymousType02</u>  ，<>f_AnonymousType是约定的前缀，0指的是我在程序当中创建的第一个，`2就是这个类型呢，是一个泛型类，构成这个类型的时候呢，需要两个类型来构成他，一个是`string类型一个是int类型
+<u><>f_AnonymousType02</u> ，<>f_AnonymousType 是约定的前缀，0 指的是我在程序当中创建的第一个，`2就是这个类型呢，是一个泛型类，构成这个类型的时候呢，需要两个类型来构成他，一个是`string 类型一个是 int 类型
 
 **`new`操作符类型强大，不能够乱使，那么在写大型程序的时候，为了避免`new`操作符造成的紧耦合我们有一种依赖注入的设计模式**
 
@@ -1450,7 +1451,7 @@ namespace OperatorsExample
             csStu.Report(); // I'm CS student
         }
     }
-    
+
     class Student
     {
         public void Report()
@@ -1458,7 +1459,7 @@ namespace OperatorsExample
             Console.WriteLine("Im a student.");
         }
     }
-    
+
     class CsStudent: Student
     {
         new public void Report() //子类对父类的方法进行隐藏
@@ -1492,7 +1493,7 @@ namespace OperatorsExample
             //{
             //    Console.WriteLine("There's overflow!");
             //}
-            
+
             checked //unchecked
             {
                 try
@@ -1528,13 +1529,13 @@ namespace Example
             // {
             //    this.myTextBox.Text = "Hello, World!"
             // }
-            
+
             this.myButton.Click += (sender, e) =>
             {
                 this.myTextBox.Text = "Hello, World!";
             }
         }
-        
+
         //void myButton_Click(object sender,RoutedEventArgs e)
         //{
         //    this.myTextBox.Text = "Hello, World!";
@@ -1559,7 +1560,7 @@ namespace OperatorsExample
             }
         }
     }
-    
+
     struct Student
     {
         int ID;
@@ -1588,7 +1589,7 @@ namespace OperatorsExample
             }
         }
     }
-    
+
     struct Student
     {
         public int ID;
@@ -1597,7 +1598,7 @@ namespace OperatorsExample
 }
 ```
 
-在c#中有严格的规定，像指针操作，取地址操作，以及用指针访问去访问成员的操作，只能用来操作结构体类型，不能用来操作引用类型
+在 c#中有严格的规定，像指针操作，取地址操作，以及用指针访问去访问成员的操作，只能用来操作结构体类型，不能用来操作引用类型
 
 ### 壹元操作符
 
@@ -1637,7 +1638,7 @@ namespace OperatorsExample
             int x = 100;
             int y = -x; // -100
             int y = -(-x); // 100
-            
+
             int x = int.MinValue; //
             int y = checked(-x); //System.OverflowException 栈溢出
         }
@@ -1656,7 +1657,7 @@ namespace OperatorsExample
             int y = ~x;
             string xStr = Covert.Tostring(x, 2).PadLeft(32, '0');// 00000000101111000110000101001110
             string yStr = Covert.Tostring(y, 2).PadLeft(32, '0');// 11111111010000111001111010110001
-            
+
             int x = int.MinValue;
             int y = -x; // -2147483648
             string xStr = Convert.ToString(x, 2).PadLeft(32, '0'); // 10000000000000000000000000000000
@@ -1674,7 +1675,7 @@ namespace OperatorsExample
         {
             int x = 100;
             int y = ++x;
-            // x = x + 1; 
+            // x = x + 1;
             // int y = x;
             int y = --x;
             // x = x - 1;
@@ -1687,16 +1688,16 @@ namespace OperatorsExample
 **类型转换**
 
 - 隐式(implicit)类型转换
-    - 不丢失精度的转换
-    - 子类向父类的转换
-    - 装箱（性能上的损失，不会在精度上进行损失）
+  - 不丢失精度的转换
+  - 子类向父类的转换
+  - 装箱（性能上的损失，不会在精度上进行损失）
 - 显式(explicit)类型转换
-    - 有可能丢失精度（甚至发生错误）的转换，即cast（铸造）
-    - 拆箱
-    - 使用Convert类
-    - ToString方法与各数据类型的Parse/TryParse方法
+  - 有可能丢失精度（甚至发生错误）的转换，即 cast（铸造）
+  - 拆箱
+  - 使用 Convert 类
+  - ToString 方法与各数据类型的 Parse/TryParse 方法
 - 自定义类型转换操作符
-    - 示例
+  - 示例
 
 ```c#
 namespace ConversionExample
@@ -1718,7 +1719,7 @@ namespace ConversionExample
 
 ![image-20250222154501220](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250222154501220.png)
 
-[*csharp-language-specification-5.0*](../assets/Csharp/csharp-language-specification-5.0.pdf)
+[_csharp-language-specification-5.0_](../assets/Csharp/csharp-language-specification-5.0.pdf)
 
 ```c#
 namespace ConversionExample
@@ -1734,7 +1735,7 @@ namespace ConversionExample
             a.;//只能访问到Eat();
         }
     }
-    
+
     class Animal
     {
         public void Eat()
@@ -1742,7 +1743,7 @@ namespace ConversionExample
             Console.WriteLine("Eating...");
         }
     }
-    
+
     class Human : Animal
     {
         public void Think()
@@ -1750,7 +1751,7 @@ namespace ConversionExample
             Conosle.WriteLine("Who i am?");
         }
     }
-    
+
     class Teacher : Human
     {
         public void Teach()
@@ -1796,10 +1797,10 @@ namespace ConversionExample
 }
 ```
 
-- **负数在 `int` 中的存储**：`-1` 在 `int` 类型中，存储为补码，二进制表示为 `11111111 11111111 11111111 11111111`（32位）。其中，最高位 `1` 表示负号。
+- **负数在 `int` 中的存储**：`-1` 在 `int` 类型中，存储为补码，二进制表示为 `11111111 11111111 11111111 11111111`（32 位）。其中，最高位 `1` 表示负号。
 - **转换为 `uint` 类型时**：当我们将 `-1` 转换为 `uint` 类型时，`-1` 的二进制表示中的所有 `1` 被直接当作数值使用，而不考虑符号。因此，`-1`（`11111111 11111111 11111111 11111111`）被视作一个无符号整数，其对应的十进制值为 `4294967295`。
 
-一个有符号类型的负数它的负数向一个无符号类型的值去转化的时候，肯定会发生值上的变化，有符号数据类型它的最高位那个1是来表示负数的，你现在把它转化成一个无符号的数之后，一个无符号的数就直接拿最高位的1当作真实的数值了
+一个有符号类型的负数它的负数向一个无符号类型的值去转化的时候，肯定会发生值上的变化，有符号数据类型它的最高位那个 1 是来表示负数的，你现在把它转化成一个无符号的数之后，一个无符号的数就直接拿最高位的 1 当作真实的数值了
 
 `Convert`类
 
@@ -1815,7 +1816,7 @@ namespace Convert
         {
             InitializeComponent();
         }
-        
+
         private void btn_Click(object Sender, RoutedEventArgs e)
         {
             double x = System.Convert.ToDouble(tb1.Text);
@@ -1829,7 +1830,7 @@ namespace Convert
 }
 ```
 
-**c#语言它的类型体系是以object为根的，那么任何一种数据类型都是由object类型直接或间接派生出来的**
+**c#语言它的类型体系是以 object 为根的，那么任何一种数据类型都是由 object 类型直接或间接派生出来的**
 
 ```c#
 namespace Convert
@@ -1843,7 +1844,7 @@ namespace Convert
         {
             InitializeComponent();
         }
-        
+
         private void btn_Click(object Sender, RoutedEventArgs e)
         {
             double x = double.Parse(this.tb1.Text);
@@ -1870,11 +1871,11 @@ namespace ConversionExample
             Console.WriteLine(wukongSun.Age);
         }
     }
-    
+
     class stone
     {
         public int Age;
-        
+
         public static explicit operator Monkey(Stone stone)
         {
             Monkey m = new Monkey();
@@ -1882,7 +1883,7 @@ namespace ConversionExample
             return m;
         }
     }
-    
+
     class Monkey
     {
         public int Age;
@@ -1906,7 +1907,7 @@ namespace ConversionExample
             var x = 3 * 4; //System.Int32
             var x = 3.0 * 4.0;//System.Double
             var x = 3.0 * 4;//System.Double 数据类型提升（为了不产生精度丢失）
-            
+
             int x = 100;
             double y = x; //int类型向double类型转换的时候是隐式转换，不会丢失精度；double类型的精度要比int类型是要高的
         }
@@ -1924,18 +1925,18 @@ namespace ConversionExample
             int x = 5;
             int y = 4;
             int z = x / y; //第一个特点，因为是整除，小数点后面的数据都省去了；第二个特点，被除数不能是0
-            
+
             double x = 5;
             double y = 4;
             double z = x / y; //1.25
-            
+
             double x = 5.0;
             double y = 0;
             double z = x / y; //Infinity;如果是-5.0就是-Infinity
             double a = double.PostitiveInfinity;
             double b = double.NegativeInfinity;
             double c = a / b; //NaN
-            
+
             double x = (double)5 / 4; //1.25（数据类型提升）
             double x = (double)(5 / 4); //1（1.0）
         }
@@ -1956,7 +1957,7 @@ namespace ConversionExample
             {
                 Console.WriteLine(i % 10);//一直取的是最后一位
             }
-            
+
             double x = 3.5;
             double y = 3;
             Console.WriteLine(x % y); // 0.5(取余也会涉及到数据类型提升)
@@ -1977,7 +1978,7 @@ namespace ConversionExample
             var x = 3.0 + 4;
             Console.WriteLine(x.GetType().Name); //Double
             Console.WriteLine(x); //7(7.0)
-            
+
             string s1 = "123";
             string s2 = "abc";
             string s3 = s1 + s2;
@@ -2004,15 +2005,15 @@ namespace ConversionExample
             int y = x >> 2;
             string strX = Convert.ToString(x, 2).PadLeft(32, '0'); // 00000000000000000000000000000111
             string strY = Convert.Tostring(y, 2).PadLeft(32, '0'); // 00000000000000000000000000000001
-            Console.WriteLine(strX); 
-            Console.WriteLine(strY); 
+            Console.WriteLine(strX);
+            Console.WriteLine(strY);
             Console.WriteLine(y); // 1，溢出了，但是是在unchecked上下文当中，所以不会产生溢出，在checked上下文当中会产生溢出
         }
     }
 }
 ```
 
-当在没有溢出的情况下，左移就是乘二，右移就是除二；左移和右移补位的规定，左移不论正数还是负数补进来的都是0，右移的时候如果你现在操作的是一个正数的话最高补进来的是0，如果你操作的是一个负数的话，那么最高位补进来的是1
+当在没有溢出的情况下，左移就是乘二，右移就是除二；左移和右移补位的规定，左移不论正数还是负数补进来的都是 0，右移的时候如果你现在操作的是一个正数的话最高补进来的是 0，如果你操作的是一个负数的话，那么最高位补进来的是 1
 
 ### 关系运算操作符
 
@@ -2030,47 +2031,47 @@ namespace ConversionExample
             var result = x > y;
             Console.WriteLine(result.GetType().FullName); //System.Double 布尔类型
             Console.WriteLine(result); //True
-            
+
             int x = 5;
             double y = 4.0;
             var result = x < y;
             Console.WriteLine(result.GetType().FullName); //System.Double 布尔类型
             Console.WriteLine(result); //False
-            
+
             int x = 5;
             double y = 4.0;
             var result = x <= y;
             Console.WriteLine(result.GetType().FullName); //System.Double 布尔类型
             Console.WriteLine(result); //False
-            
+
             int x = 5;
             double y = 4.0;
             var result = x == y;
             Console.WriteLine(result.GetType().FullName); //System.Double 布尔类型
             Console.WriteLine(result); //False
-            
+
             int x = 5;
             double y = 4.0;
             var result = x!= y;
             Console.WriteLine(result.GetType().FullName); //System.Double 布尔类型
             Console.WriteLine(result); //True
-            
+
             char char1 = 'a';
             char char2 = 'A';
             var result = char1 > char2;
             Console.WriteLine(result); //True
-            
+
             char char1 = 'a';
             char char2 = 'A';
             ushort u1 = (ushort)char1;
             ushort u2 = (ushort)char2;
             Console.WriteLine(u1); //97
             Console.WriteLine(u2); //65
-            
+
             string str1 = "abc";
             string str2 = "Abc";
             Console.WriteLine(str1==str2); //false，str1改为Abc就为True
-            
+
             string str1 = "abc";
             string str2 = "Abc";
             Console.WriteLine(str1.ToLower() == str2.ToLower()); //第一个字母小写，True
@@ -2095,28 +2096,28 @@ namespace ConversionExample
             var result = t is Teacher;
             Console.WriteLine(result.GetType().FullName); //System.Boolean
             Console.WriteLine(result); //True,t = null为False
-            
+
             var resslt = t is Human; // True
-            
+
             var result = t is Animal; // True
-            
+
             Car car = new Car();
             Console.WriteLine(car is Animal);// False
             Console.WrtieLine(car is object);// True
-            
+
             var result = h is Teacher;
-            
+
             Humman h = new Humman();
             var result = h is Teacher;
             Console.WriteLine(result); // False
-            
+
             object o = new Teacher();
             if (o is Teacher)
             {
                 Teacher t = (Teacher)o;
                 t.Teach();
             }
-            
+
             object o = new Teacher();
             Teacher t = o as Teacher; //如果这个o像Teacher一样那么就把这个对象的地址交给t这个变量，否则的话就把一个null值交给t
             if(t! = null)
@@ -2125,7 +2126,7 @@ namespace ConversionExample
             }
         }
     }
-    
+
     class Animal
     {
         public void Eat()
@@ -2133,7 +2134,7 @@ namespace ConversionExample
             Console.WriteLine("Eating...");
         }
     }
-    
+
     class Human : Animal
     {
         public void Think()
@@ -2141,7 +2142,7 @@ namespace ConversionExample
             Console.WriteLine("Who I am?");
         }
     }
-    
+
     class Teacher : Human
     {
         public void Teache()
@@ -2149,7 +2150,7 @@ namespace ConversionExample
             Console.WriteLine("I teach programming.")
         }
     }
-    
+
     class Car : Object //不论有没有显式的写出来Object，C#编译器都会让我们的类从Object派生出来
     {
         public void Run()
@@ -2158,7 +2159,7 @@ namespace ConversionExample
         }
     }
 }
-    
+
 ```
 
 ### 逻辑运算操作符
@@ -2247,7 +2248,7 @@ namespace CoversionExample
                 Console.WriteLine("Hello");
             }
             Console.WriteLine(a); // 不打印Hello，a打印出3
-            
+
             int x = 5;
             int y = 4;
             int a = 3;
@@ -2256,7 +2257,7 @@ namespace CoversionExample
                 Console.WriteLine("Hello");
             }
             Console.WriteLine(a); // 不打印Hello，a打印出4
-            
+
             int x = 5;
             int y = 4;
             int a = 3;
@@ -2265,7 +2266,7 @@ namespace CoversionExample
                 Console.WriteLine("Hello");
             }
             Console.WriteLine(a); // 打印Hello，a不执行，a打印3
-            
+
             int x = 3;
             int y = 4;
             int a = 3;
@@ -2279,9 +2280,9 @@ namespace CoversionExample
 }
 ```
 
-### null值合并操作符
+### null 值合并操作符
 
-`??`null值合并操作符
+`??`null 值合并操作符
 
 ```c#
 namespace ConversionExample
@@ -2294,15 +2295,15 @@ namespace ConversionExample
             x = 100;
             Console.WriteLine(x); //100
             Console.WriteLine(x.HasValue);//ture
-            
-            Nullable<int> x = null; 
+
+            Nullable<int> x = null;
             Console.WriteLine(x.HasValue);//False
-            
+
             int? x = null;
             x = 100;
             Console.WriteLine(x); //100
             Console.WriteLine(x.value);//100
-            
+
             int? x = null; // Nullable<int>的简写，可空整型
             int y = x ?? 1; //x如果是null值就赋1
             Console.WriteLine(y);
@@ -2311,7 +2312,7 @@ namespace ConversionExample
 }
 ```
 
-###   条件三元操作符
+### 条件三元操作符
 
 `?:`条件操作符
 
@@ -2332,7 +2333,7 @@ namespace ConversionExample
                 str = "Failed";
             }
             Console.WriteLine(str); //pass
-            
+
             // string str = (x>= 60) ? "Pass" : "Failed"; // if else简写
         }
     }
@@ -2352,10 +2353,10 @@ namespace ConversionExample
         {
             int x = 5;
             x = x + 1; // x += 1;
-            
+
             int x = 7;
             x<<=2; // x = x<<2;
-            
+
             int x = 5;
             int y = 6;
             int z = 7;
@@ -2379,16 +2380,16 @@ namespace ConversionExample
 
 - 什么是表达式
 
-    - Expressions, together with commands and declarations, are one of the basic components of every programming language. We can say that expressions are the essential component of every language.
-    - An expressions is a syntactic entity whose evaluation either produces a value or fails to terminate,in which case the expression is undefined
-    - 各种编程语言对表达式的实现不尽相同，但大体上都符合这人定义
-    
+  - Expressions, together with commands and declarations, are one of the basic components of every programming language. We can say that expressions are the essential component of every language.
+  - An expressions is a syntactic entity whose evaluation either produces a value or fails to terminate,in which case the expression is undefined
+  - 各种编程语言对表达式的实现不尽相同，但大体上都符合这人定义
+
 - C#语言对表达式的定义
-    - An expression is a seguence of one or more operands and zero or more operators that can be evaluated to a single value, object, method, or namespace.Expressions can consist of a literal value, a method invocation, an operator and its operands, or a simple name. Simple names can be the name of a variable, type member, method parameter, namespace or type.
-    
-    - 算法逻辑的最基本（最小）单元，表达一定的算法意图
-    
-    - 因为有操作符有优先级，所以表达式也就有了优先级
+  - An expression is a seguence of one or more operands and zero or more operators that can be evaluated to a single value, object, method, or namespace.Expressions can consist of a literal value, a method invocation, an operator and its operands, or a simple name. Simple names can be the name of a variable, type member, method parameter, namespace or type.
+
+  - 算法逻辑的最基本（最小）单元，表达一定的算法意图
+
+  - 因为有操作符有优先级，所以表达式也就有了优先级
 
 ```c#
   namespace ExperssionExample
@@ -2398,26 +2399,26 @@ namespace ConversionExample
           static void Main(string[] args)
           {
               int x;
-              x = 100; 
+              x = 100;
               x++;
               ++x; //single value
-              
+
               (new Form()).ShowDialog(); //object
-              
+
                Action myAction = new Action(Console.WriteLine); //method 成员访问表达式，操作数有两个，左边是类型，右边是类型的成员。这个表达式最后得到的是一个方法，方法本身也是一个语法实体，我们并没有调用它，只是得到它
               System.Windows.Forms.Form myForm = new Form();
-              
+
               string name;
               name = "Mr.Okay"; //字面值
-              
+
               double x = Math.Pow(2, 3);//函数调用构成表达式
-              
+
               int X = 2 + 3;//操作数和操作符构成的表达式
-              
+
               int x = 100;
               int y;
               y = x; //simple name
-              
+
               Type myType = typeof(Int64);//class name(simple name)
               Console.WriteLine(myType.FullName) //System.Int64
           }
@@ -2432,94 +2433,92 @@ namespace ConversionExample
 ### 分类
 
 - C#语言中表达式的分类
-    - A value.Every value has an associated type.任何能得到值的运算（回顾操作符和结果类型）
-    
-    - A variable.Every variable has an associated type
-    
-      ```c#
-      int x = 100;
-      int y;
-      y = x;
-      ```
-    
-    - A namespace
-    
-      ```c#
-      System.Windows.Forms.Form myForm; //System是名称空间、Windows是子名称空间，Forms是类型，每个名称空间本身就是独立的表达式
-      ```
-    
-    - A type
-    
-      ```c#
-      var t = typeof(Int32);
-      ```
-    
-    - A method group 例如：Console.WriteLine，这是一组方法，重载决策决定具体调用哪一个
-    
-      ```c#
-      Console.WriteLine("Hello,World!"); //Console.WriteLine拿到是方法组，而在后面调用的时候，才是从这个方法组里利用重载决策来选出最合适的方法进行调用
-      ```
-    
-    - A null literal
-    
-      ```c#
-      Form myForm = null; //null不属于任何数据类型，因为它是空的
-      int x = 100; //数值类型
-      ```
-    
-    - An anonymouse function
-    
-      ```c#
-      Acton a = delegate(){ Console.WriteLine("Hello, World!")}; //匿名方法表达式，这个表达式返回值是一个委托
-      a(); //"Hello, World!"
-      ```
-    
-    - A property access
-    
-      ```c#
-      Form myForm = new Form();
-      myForm.Text = "Hello"; //成员访问表达式，访问到属性了
-      myForm.ShowDialog();
-      ```
-    
-    - An event access
-    
-      ```c#
-      Form myForm = new Form();
-      myForm.Text = "Hello"; 
-      myForm.Load += myForm_Load; //访问事件表达式
-      myForm.ShowDialog();
-      
-      static void myForm_Load(object sender, EventArgs e)
-      {
-          Form form = sender as Form;
-          if(form == null)
-          {
-              return;
-          }
-          
-          form.Text = "New Title";
-      }
-      ```
-    
-    - An indexer access
-    
-      ```c#
-      List<int> intList = new List<int>(){1,2,3};
-      int x = intList[2]; //访问索引器
-      ```
-    
-    - Nothing.对返回值为void的方法的调用
-    
-      ```c#
-      Console.WriteLine("Hello!") //无返回值，Nothing
-      ```
-    
+  - A value.Every value has an associated type.任何能得到值的运算（回顾操作符和结果类型）
+
+  - A variable.Every variable has an associated type
+
+    ```c#
+    int x = 100;
+    int y;
+    y = x;
+    ```
+
+  - A namespace
+
+    ```c#
+    System.Windows.Forms.Form myForm; //System是名称空间、Windows是子名称空间，Forms是类型，每个名称空间本身就是独立的表达式
+    ```
+
+  - A type
+
+    ```c#
+    var t = typeof(Int32);
+    ```
+
+  - A method group 例如：Console.WriteLine，这是一组方法，重载决策决定具体调用哪一个
+
+    ```c#
+    Console.WriteLine("Hello,World!"); //Console.WriteLine拿到是方法组，而在后面调用的时候，才是从这个方法组里利用重载决策来选出最合适的方法进行调用
+    ```
+
+  - A null literal
+
+    ```c#
+    Form myForm = null; //null不属于任何数据类型，因为它是空的
+    int x = 100; //数值类型
+    ```
+
+  - An anonymouse function
+
+    ```c#
+    Acton a = delegate(){ Console.WriteLine("Hello, World!")}; //匿名方法表达式，这个表达式返回值是一个委托
+    a(); //"Hello, World!"
+    ```
+
+  - A property access
+
+    ```c#
+    Form myForm = new Form();
+    myForm.Text = "Hello"; //成员访问表达式，访问到属性了
+    myForm.ShowDialog();
+    ```
+
+  - An event access
+
+    ```c#
+    Form myForm = new Form();
+    myForm.Text = "Hello";
+    myForm.Load += myForm_Load; //访问事件表达式
+    myForm.ShowDialog();
+
+    static void myForm_Load(object sender, EventArgs e)
+    {
+        Form form = sender as Form;
+        if(form == null)
+        {
+            return;
+        }
+
+        form.Text = "New Title";
+    }
+    ```
+
+  - An indexer access
+
+    ```c#
+    List<int> intList = new List<int>(){1,2,3};
+    int x = intList[2]; //访问索引器
+    ```
+
+  - Nothing.对返回值为 void 的方法的调用
+
+    ```c#
+    Console.WriteLine("Hello!") //无返回值，Nothing
+    ```
 - 复合表达式的求值
-    - 注意操作符的优先级和同优先级操作符的运算方向
-    
-- 参考C#语言定义文档
-    - 仅作参考，不必深究 ———— 毕竟我们是在学习语言、不是去实现这门语言 
+  - 注意操作符的优先级和同优先级操作符的运算方向
+- 参考 C#语言定义文档
+  - 仅作参考，不必深究 ———— 毕竟我们是在学习语言、不是去实现这门语言
 
 ```c# title="x.y成员访问表达式"
 namespace ExperssionExample
@@ -2533,7 +2532,7 @@ namespace ExperssionExample
             Console.WriteLine(x.GetType());
         }
     }
-    
+
     class Student
     {
         public int ID;
@@ -2556,7 +2555,7 @@ namespace ExperssionExample
 }
 ```
 
-在定义`Math.Pow()`的时候，它的返回值类型就是double
+在定义`Math.Pow()`的时候，它的返回值类型就是 double
 
 ```c# title="元素访问表达式"
 namespace ExpressionExample
@@ -2569,7 +2568,7 @@ namespace ExpressionExample
             double[] doubleArray = new double[] {1.0, 2.0, 3.0};
             var x = intList[1];
             Console.WriteLine(x.GetType()); //System.Int32
-            
+
             var x = doubleArray[1];
             Console.WriteLine(x.GetType()); //System.Double
         }
@@ -2635,7 +2634,7 @@ namespace ExpressionExample
 }
 ```
 
-`+ -`不会影响操作类型；`!`操作数必须是布尔类型的，而所得到的结果也是布尔类型的，只是把true变成false，把false变成true；`(T)x`数据类型是一定会转变的，而数据类型就是你要转变的数据类型；
+`+ -`不会影响操作类型；`!`操作数必须是布尔类型的，而所得到的结果也是布尔类型的，只是把 true 变成 false，把 false 变成 true；`(T)x`数据类型是一定会转变的，而数据类型就是你要转变的数据类型；
 
 ```c# title="算术运算符"
 namespace ExprssionExample
@@ -2645,7 +2644,7 @@ namespace ExprssionExample
         static void Main(string[] args)
         {
             var x = 4 / 3;// System.Int32
-            
+
             var x = 4.0 / 3;// 数据提升，System.Double
         }
     }
@@ -2666,7 +2665,7 @@ namespace ExpressionExample
 }
 ```
 
-`is`操作符组成的也是布尔类型表达式，`as`操作符所组成的表达式，如果`as`成功了那就和右边的数据类型一致，如果不成功就返回一个null值；`& ^ |`这三个操作符所组成的表达式，它的数据类型和操作数的数据类型是一致的；`&& ||`这两个操作符所组成的表达式也都是布尔类型表达式，由它们所组成的表达式，在经过求值之后得到的是布尔类型的值，而且这两个操作符它们的操作数也必须是布尔类型的操作数（所以这两个操作符，经常连接一长串的布尔类型的表达式或者布尔类型的值）；
+`is`操作符组成的也是布尔类型表达式，`as`操作符所组成的表达式，如果`as`成功了那就和右边的数据类型一致，如果不成功就返回一个 null 值；`& ^ |`这三个操作符所组成的表达式，它的数据类型和操作数的数据类型是一致的；`&& ||`这两个操作符所组成的表达式也都是布尔类型表达式，由它们所组成的表达式，在经过求值之后得到的是布尔类型的值，而且这两个操作符它们的操作数也必须是布尔类型的操作数（所以这两个操作符，经常连接一长串的布尔类型的表达式或者布尔类型的值）；
 
 ```c# title="null值合并操作符"
 namespace ExpressionExample
@@ -2676,13 +2675,13 @@ namespace ExpressionExample
         static void Main(string[] args)
         {
             int? x = null;
-            var y = x ?? 100; 
+            var y = x ?? 100;
         }
     }
 }
 ```
 
-`??`它的数据类型是由null值合并操作符左边的操作数的数据类型的类型参数来决定的
+`??`它的数据类型是由 null 值合并操作符左边的操作数的数据类型的类型参数来决定的
 
 ```c# title="条件运算符?:"
 namespace ExpressionExample
@@ -2708,7 +2707,7 @@ namespace ExpressionExample
             int y;
             Console.WriteLine(y=x); //100
             Console.WriteLine((y=x).GetType().FullName); //System.Int32
-            
+
             bool b = false;
             if(b == 5 > 3) // false 不等于 true，换成b = 5 > 3就执行
             {
@@ -2723,20 +2722,20 @@ namespace ExpressionExample
 
 ### 定义
 
-- Wikipeida对语句的定义
+- Wikipeida 对语句的定义
 
-    - Incomputer programming a statement is the smallest standalone element of an imperative programming language which expresses some action to be carried out.A program written in such a language is formed by a seguence of one or more statements.A statement will have internal components (e.gexpressions).
-    - 语句是高级语言的语法——编译语言和机器语言只有指令（高级语言中的表达式对应低级语言中的指令），语句等价于一人或一组有明显逻辑关联的指令。举例：求圆柱体积
-    
+  - Incomputer programming a statement is the smallest standalone element of an imperative programming language which expresses some action to be carried out.A program written in such a language is formed by a seguence of one or more statements.A statement will have internal components (e.gexpressions).
+  - 语句是高级语言的语法——编译语言和机器语言只有指令（高级语言中的表达式对应低级语言中的指令），语句等价于一人或一组有明显逻辑关联的指令。举例：求圆柱体积
+
 - C#语言对语句的定义
 
-    - The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling methods, looping through collections, and branching to one or another block of code, depending on a given condition. The order in
+  - The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling methods, looping through collections, and branching to one or another block of code, depending on a given condition. The order in
     which statements are executed in a program is called the flow of control or flow of execution
     The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time
-    - C语言的语句除了能够让程序员"顺序地"(sequentially)表达算法思想，还能通过条件判断、跳转和循环等方法控制程序逻辑的走向
-    - 简言之就是：陈述算法思想，控制逻辑走向，完成有意义的动作(action）
-    - C#语言的语句由分号（；）结尾，但由分号结尾的不一定都是语句
-    - 语句一定是出现在方法体里
+  - C 语言的语句除了能够让程序员"顺序地"(sequentially)表达算法思想，还能通过条件判断、跳转和循环等方法控制程序逻辑的走向
+  - 简言之就是：陈述算法思想，控制逻辑走向，完成有意义的动作(action）
+  - C#语言的语句由分号（；）结尾，但由分号结尾的不一定都是语句
+  - 语句一定是出现在方法体里
 
 ### 分类-D01-概要
 
@@ -2772,16 +2771,16 @@ namespace StatementsExample
         static void Main(string[] args)
         {
             int x = 100;  //声明变量的时候追加了变量的初始化器
-            
+
             int x;
             x = 100; //声明的时候没有初始化，而在后面的时候对变量赋值
-            
+
             int[] myArray = {1, 2, 3};
             Console.WriteLine(myArray[1]); //数组初始化器
-            
+
             const int x = 100;
             x = 200; //能接受赋值一定是个变量，常量的值是不能够再改变的
-            
+
             const int x; //常量必须要被初始化
         }
     }
@@ -2799,7 +2798,7 @@ namespace StatementsExample
         {
             Add(3.0, 4.0);
         }
-        
+
         static double Add(double a, double b)
         {
             double result = a + b;
@@ -2810,7 +2809,7 @@ namespace StatementsExample
 }
 ```
 
-上面这个方法实际只做了两件事情，当一个方法做两件事情的时候，有一件事情一定是它的主功能，而另一件事情是它的副功能，这样在未来的时候，无论那个功能需求上发生了变化我们都要回来改这个方法，而如果有别的方法还调用这个方法的话呢，我的这个改动就有可能引入意想不到的bug，这个时候我们就可以说我们的代码设计实际是有问题的
+上面这个方法实际只做了两件事情，当一个方法做两件事情的时候，有一件事情一定是它的主功能，而另一件事情是它的副功能，这样在未来的时候，无论那个功能需求上发生了变化我们都要回来改这个方法，而如果有别的方法还调用这个方法的话呢，我的这个改动就有可能引入意想不到的 bug，这个时候我们就可以说我们的代码设计实际是有问题的
 
 ```c#
 namespace StatementsExample
@@ -2870,7 +2869,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D05-选择语句 - if语句
+### 分类-D05-选择语句 - if 语句
 
 ```c#
 namespace StatementsExample
@@ -2881,13 +2880,13 @@ namespace StatementsExample
         {
             if(5 > 3)Console.WriteLine("Hello");
             if(5 + 3)Console.WriteLine("Hello");//编译不过去，原括号里需要布尔类型表达式
-            
+
             int y = 100;
             int x = 200;
             if(x < y)
                 Console.WriteLine("Hello");
             Console.WriteLine("World");
-            
+
             if(x < y)
             {
                 Console.WriteLine("Hello");
@@ -3014,7 +3013,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D06-选择语句-switch语句
+### 分类-D06-选择语句-switch 语句
 
 ```c#
 namespace StatementsExample
@@ -3051,13 +3050,13 @@ namespace StatementsExample
                     Console.WriteLine("C");
                     break;
             }
-                 
+
         }
     }
 }
 ```
 
-如果 switch 表达式的类型为 sbyte、byte、short、ushort、int、uint、long、ulong、bool、char、string或enum-type，或者是对应于以上某种类型的可以为null的类型，则该类型就是 switch语句的主导类型。
+如果 switch 表达式的类型为 sbyte、byte、short、ushort、int、uint、long、ulong、bool、char、string 或 enum-type，或者是对应于以上某种类型的可以为 null 的类型，则该类型就是 switch 语句的主导类型。
 
 ```c#
 namespace StatementsExample
@@ -3096,7 +3095,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D07-异常捕捉语句-try语句
+### 分类-D07-异常捕捉语句-try 语句
 
 ```c#
 namespace StatementsExample
@@ -3110,7 +3109,7 @@ namespace StatementsExample
             Console.WriteLine(r);
         }
     }
-    
+
     class Calculator
     {
         public int Add(string arg1, string arg2)
@@ -3149,7 +3148,7 @@ namespace StatementsExample
         {
             Console.WriteLine("Out of range!");
         }
-        
+
         int result = a + b;
         return result;
     }
@@ -3313,7 +3312,7 @@ namespace StatementsExample
 
 `thorw`谁调用谁就抓住异常处理
 
-### 分类-D08-循环语句-while语句
+### 分类-D08-循环语句-while 语句
 
 ```c#
 namespace StatementsExample
@@ -3324,16 +3323,16 @@ namespace StatementsExample
         {
             int score = 0;
             bool canContinue = true;
-            
+
             {
                 Console.WriteLine("Please input first number:");
                 string str1 = Console.ReadLine();
                 int x = int.Parse(str1);
-                
+
                 Console.WriteLine("Please intput second number:");
                 string str2 = Console.ReadLine();
                 int y = int.Parse(str2);
-                
+
                 int sum = x + y;
                 if(sum == 100)
                 {
@@ -3346,7 +3345,7 @@ namespace StatementsExample
                     canContinue = false;
                 }while(canContinue)
             }
-            
+
             Console.WriteLine("Your score is {0}", score);
             Console.WriteLine("GAME OVER!");
         }
@@ -3354,7 +3353,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D09-循环语句-do语句
+### 分类-D09-循环语句-do 语句
 
 ```c#
 namespace StatementsExample
@@ -3370,11 +3369,11 @@ namespace StatementsExample
                 Console.WriteLine("Please input first number:");
                 string str1 = Console.ReadLine();
                 int x = int.Parse(str1);
-                
+
                 Console.WriteLine("Please intput second number:");
                 string str2 = Console.ReadLine();
                 int y = int.Parse(str2);
-                
+
                 sum = x + y;
                 if(sum == 100)
                 {
@@ -3386,7 +3385,7 @@ namespace StatementsExample
                     Console.WriteLine("Error! {0}+{1}={2}", x, y, sum);
                 }
             }while(sum == 100);
-            
+
             Console.WriteLine("Your score is {0}", score);
             Console.WriteLine("GAME OVER!");
         }
@@ -3394,7 +3393,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D10-跳转语句-continue语句
+### 分类-D10-跳转语句-continue 语句
 
 ```C#
 namespace StatementsExample
@@ -3409,12 +3408,12 @@ namespace StatementsExample
             {
                 Console.WriteLine("Please input first,number:");
                 string str1 = Console.ReadLine();
-                
+
                 if(str1.ToLower() == "end")
                 {
                     break；
                 }
-                
+
                 int x = 0;
                 try
                 {
@@ -3425,14 +3424,14 @@ namespace StatementsExample
                     Console.WriteLine("First number has problem!Restart.");
                     continue;
                 }
-                
+
                 Console.WriteLine("Plase input second number:");
                 string str2 = Console.ReadLine();
                 if(str2.ToLower() == "end")
                 {
                     break;
                 }
-                 
+
                 int y = 0;
                 try
                 {
@@ -3443,7 +3442,7 @@ namespace StatementsExample
                     Console.WriteLine("Second number has problem!Restart.")
                     continue;
                 }
-                
+
                 sum = x + y;
                 if(sum == 100)
                 {
@@ -3455,7 +3454,7 @@ namespace StatementsExample
                     Console.WriteLine("Error!{0}+{1}={2}", x, y, sum);
                 }
             }while(sum == 100);
-            
+
             Console.WriteLine("Your score is {0}.", score);
             Console.WriteLine("GAME OVER!");
         }
@@ -3463,7 +3462,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D11-循环语句-for语句
+### 分类-D11-循环语句-for 语句
 
 ```c# title="九九乘法表"
 namespace StatementsExample
@@ -3485,7 +3484,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D12-循环语句-foreach语句
+### 分类-D12-循环语句-foreach 语句
 
 ```c#
 namespace StatementsExample
@@ -3500,20 +3499,20 @@ namespace StatementsExample
             {
                 Console.WriteLine(enumerator.Current);
             }
-            
+
             enumerator.Reset();
             while(enumerator.MoveNext())
             {
                 Console.WriteLine(enumerator.Current);
             }
-            
+
             List<int> intList = new List<int>() {1, 2, 3, 4, 5, 6};
             IEnumerator enumerator = intList.GetEnumerator();
             while(enumerator.MoveNext())
             {
                 Console.WriteLine(enumerator.Current);
             }
-            
+
             enumerator.Reset();
             while(enumerator.MoveNext())
             {
@@ -3532,7 +3531,7 @@ namespace StatementsExample
         static void Main(string[] args)
         {
             int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
-            
+
             List<int> intList = new List<int>() {1, 2, 3, 4, 5, 6};
             foreach(var current in intList)
             {
@@ -3543,7 +3542,7 @@ namespace StatementsExample
 }
 ```
 
-### 分类-D13-跳转语句-return语句
+### 分类-D13-跳转语句-return 语句
 
 ```c#
 namespace StatementsExample
@@ -3555,7 +3554,7 @@ namespace StatementsExample
             var result = WholsWho("Mr.Hello");
             Console.WriteLine(result);
         }
-        
+
         static string WholsWho(string alias)
         {
             if(alias == "Mr.Okay")
@@ -3567,14 +3566,14 @@ namespace StatementsExample
                 return "I don't know";
             }
         }
-        
+
         static void Greeting(string name)
         {
             if(string.IsNullOrEmpty(name))
             {
                 retrun;
             }
-            
+
             Console.WriteLine("Hello, {0}!", name);
         }
     }
@@ -3586,21 +3585,21 @@ namespace StatementsExample
 ### 字段
 
 - 什么是字段
-    - 字段（field）是一种表示与对象或类型（类与结构体）关联的变量
-    - 字段是类型的成员，旧称“成员变量”
-    - 与对象关联的字段亦称“实例字段”
-    - 与类型关联的字段称为“静态字段”，由static修饰
+  - 字段（field）是一种表示与对象或类型（类与结构体）关联的变量
+  - 字段是类型的成员，旧称“成员变量”
+  - 与对象关联的字段亦称“实例字段”
+  - 与类型关联的字段称为“静态字段”，由 static 修饰
 - 字段的声明
-    - 参见C#语言定义文档
-    - 尽管字段声明带有分号，但它不是语句
-    - 字段的名字一定是名词
+  - 参见 C#语言定义文档
+  - 尽管字段声明带有分号，但它不是语句
+  - 字段的名字一定是名词
 - 字段的初始值
-    - 无显示初始化时，字段获得其类型的默认值，所以字段"永远都不会未被初始化"
-    - 实例字段初始化的时机————对象创建时
-    - 静态字段初始化的时机————类型被加载（load）时
+  - 无显示初始化时，字段获得其类型的默认值，所以字段"永远都不会未被初始化"
+  - 实例字段初始化的时机————对象创建时
+  - 静态字段初始化的时机————类型被加载（load）时
 - 只读字段
-    - 实例只读字段
-    - 静态只读字段      
+  - 实例只读字段
+  - 静态只读字段
 
 ```c
 struct Student
@@ -3628,29 +3627,29 @@ namespace DataMemberExample
             Student stu1 = new Student();
             stu1.Age = 40;
             stu1.Score = 90;
-            
+
             Student stu2 = new Student();
             stu2.Age = 24;
             stu2.Score = 60;
-            
+
             Student.ReportAmount(); // 2
         }
     }
-    
+
     class Student
     {
         public int Age;
         public int Score;
-        
+
         public static int AverageAge;
         public static int AverageScore;
         public static int Amount;
-        
+
         public Student() //每次实例字段创建的时候执行
         {
             Student.Amount++；
         }
-        
+
         public static void ReportAmount()
         {
             Console.WriteLine(Student.Amount);
@@ -3676,7 +3675,7 @@ namespace DataMemberExample
                 stu.Score = i;
                 stuList.Add(stu);
             }
-            
+
             int totalAge = 0;
             int totalScore = 0;
             foreach (var stu in stuList)
@@ -3684,40 +3683,40 @@ namespace DataMemberExample
                 totalAge += stu.Age;
                 totalScore += stu.Score;
             }
-            
+
             Student.AverageAge = totalAge / Student.Amount;
             Student.AverageScore = totalScore / Student.Amount;
-            
+
             Student.ReportAmount();
             Student.ReportAverageAge();
             Student.ReportAverageScore();
         }
     }
-    
+
     class Student
     {
         public int Age;
         public int Score;
-        
+
         public static int AverageAge;
         public static int AverageScore;
         public static int Amount;
-        
+
         public Student()
         {
             Student.Amount++;
         }
-        
+
         public static void ReportAmount()
         {
             Console.WriteLine(Student.Amount);
         }
-        
+
         public static void ReportAverageAge()
         {
             Console.WriteLine(Student.AverageAge);
         }
-        
+
         public static void ReportAverageScore()
         {
             Console.WriteLine(Student.AverageScore);
@@ -3736,16 +3735,16 @@ namespace DataMemberExample
             Console.WriteLine(Student.Amount);
         }
     }
-    
+
     class Student
     {
         public int Age = 20;
         public int Score;
-        
+
         public static int AverageAge;
         Public static int AverageScore;
         public static int Amount; // = 100;
-        
+
         static Student()
         {
             Student.Amount = 100
@@ -3764,18 +3763,18 @@ namespace DataMemberExample
             Console.WriteLine(Brush.DefaultColor.Red);
             Console.WriteLine(Brush.DefaultColor.Green);
             Console.WriteLine(Brush.DefaultColor.Blue);
-            
+
             Brush.Default = new Color() {Red = 255, Green = 255, Blue = 255}; // 静态只读字段 不能够被赋值
         }
     }
-    
+
     struct Color
     {
         public int Red;
         public int Green;
         public int Blue;
     }
-    
+
     class Brush
     {
         public static readonly Color DefaultColor // = new Colo() {Red = 0, Green = 0, Blue = 0}
@@ -3789,27 +3788,28 @@ namespace DataMemberExample
 
 ### 属性
 
-   - 什么是属性
-     
-       - 属性(property）是一种用于访问对象或类型的特征的成员，特征反映了状态 
-       - 属性是字段的自然拓展
-          - 从命名上看，field更偏向于实例对象在内存中的布局，property更偏向于反映现实世界对象的特征
-          - 对外：暴露数据，数据可以是存储在字段里的，也可以是动态计算出来的
-          - 对内：保护字段不被非法值污染
-       - 属性由Get/Set方法对进化而来
-       - 又一个“语法糖”————属性背后的秘密
-   - 属性的声明
-       - 完整声明————后台（back）成员变量与访问器（注意使用code snippet和口refactor工具）
-       - 简略声明————只有访问器（查看IL代码）
-       - 动态计算值的属性
-       - 注意实例属性和静态属性
-       - 属性的名字一定是名词
-       - 只读属性————只有getter没有setter
-          - 尽管语法上正确，几乎没有人使用“只写属性”，因为属性的主要目的是通过向外暴露数据而表示对象/类型的状态
-   - 属性与字段的关系
-       - 一般情况下，它们都用于表示实体（对象或类型）的状态
-       - 属性大多数情况下是字段的包装器（wrapper）
-       - 建议：永远使用属性（而不是在字段）来暴露数据，即字段永远都是private或protected的   
+- 什么是属性
+
+  - 属性(property）是一种用于访问对象或类型的特征的成员，特征反映了状态
+  - 属性是字段的自然拓展
+    - 从命名上看，field 更偏向于实例对象在内存中的布局，property 更偏向于反映现实世界对象的特征
+    - 对外：暴露数据，数据可以是存储在字段里的，也可以是动态计算出来的
+    - 对内：保护字段不被非法值污染
+  - 属性由 Get/Set 方法对进化而来
+  - 又一个“语法糖”————属性背后的秘密
+
+- 属性的声明
+  - 完整声明————后台（back）成员变量与访问器（注意使用 code snippet 和口 refactor 工具）
+  - 简略声明————只有访问器（查看 IL 代码）
+  - 动态计算值的属性
+  - 注意实例属性和静态属性
+  - 属性的名字一定是名词
+  - 只读属性————只有 getter 没有 setter
+    - 尽管语法上正确，几乎没有人使用“只写属性”，因为属性的主要目的是通过向外暴露数据而表示对象/类型的状态
+- 属性与字段的关系
+  - 一般情况下，它们都用于表示实体（对象或类型）的状态
+  - 属性大多数情况下是字段的包装器（wrapper）
+  - 建议：永远使用属性（而不是在字段）来暴露数据，即字段永远都是 private 或 protected 的
 
 ```c#
 namespace PropertyExample
@@ -3822,17 +3822,17 @@ namespace PropertyExample
             {
                 Student stu1 = new Student();
                 stu1.SetAge(20);
-                
+
                 Student stu2 = new Student();
                 stu2.SetAge(20);
-                
+
                 Student stu3 = new Student();
                 stu3.SetAge(20);
-                
-                stu3.SetAge(200); //Age value has error. 
-                
+
+                stu3.SetAge(200); //Age value has error.
+
                 int avgAge = (stu1.GetAge() + stu2.GetAge() + stu3.GetAge()) / 3;
-                
+
                 Console.WriteLine(avgAge);
             }
             catch(Exception ex)
@@ -3840,16 +3840,16 @@ namespace PropertyExample
                 Console.WriteLine(ex.Message);
             }
         }
-        
+
         class Student
         {
             private int age;
-            
+
             public int GetAge()
             {
                 return this.age;
             }
-            
+
             public void SetAge(int value)
             {
                 if(value >=0 && value <= 120)
@@ -3877,15 +3877,15 @@ namespace PropertyExample
             {
                 Student stu1 = new Student();
                 stu1.Age = 20;
-                
+
                 Student stu2 = new Student();
                 stu2.Age = 20;
-                
+
                 Student stu3 = new Student();
                 stu3.Age = 20;
-                
+
                 stu3.Age = 200; //Age value has error
-                
+
                 int avgAge = (stu1.Age + stu2.Age + stu3.Age) / 3;
                 Console.WriteLine(avgAge);
             }
@@ -3894,18 +3894,18 @@ namespace PropertyExample
                 Console.WriteLine(ex.Message);
             }
         }
-        
+
         class Student
         {
             private int age;
-            
+
             public int Age
             {
                 get
                 {
                     return this.age;
                 }
-                
+
                 set
                 {
                     if(value>=0 && value<=120)
@@ -3936,15 +3936,15 @@ namespace PropertyExample
             {
                 Student stu1 = new Student();
                 stu1.Age = 20;
-                
+
                 Student stu2 = new Student();
                 stu2.Age = 20;
-                
+
                 Student stu3 = new Student();
                 stu3.Age = 20;
-                
+
                 stu3.Age = 200; //Age value has error
-                
+
                 int avgAge = (stu1.Age + stu2.Age + stu3.Age) / 3;
                 Console.WriteLine(avgAge);
             }
@@ -3953,11 +3953,11 @@ namespace PropertyExample
                 Console.WriteLine(ex.Message);
             }
         }
-        
+
         class Student
         {
             private int age;
-            
+
             public int Age
             {
                 get { return age; }
@@ -4000,16 +4000,16 @@ namespace ProrertyExample
             }
         }
     }
-    
+
     class Student
     {
         private int age;
-        
+
         public int Age
         {
             get { return age; }
             set {
-                if(value>=0 && value<=120) 
+                if(value>=0 && value<=120)
                    {
                        age = value;
                    }
@@ -4019,9 +4019,9 @@ namespace ProrertyExample
                    }
             }
         }
-        
+
         private static int amount;
-        
+
         public static int Amount
         {
             get { return amount; }
@@ -4060,7 +4060,7 @@ namespace ProrertyExample
             }
         }
     }
-    
+
     class Student
     {
         public int Age { get;set; }
@@ -4088,20 +4088,20 @@ namespace ProrertyExample
             }
         }
     }
-    
+
     class Student
     {
         private int age;
-        
-        public int Age 
-        { 
+
+        public int Age
+        {
             get { return age; }
             private set { age = value; } //不是只读属性readonly
         }
-        
+
         public void SomeMethod()
         {
-            this.Age = 20; // 
+            this.Age = 20; //
         }
     }
 }
@@ -4119,9 +4119,9 @@ namespace ProrertyExample
                 Student.Amount = new Student();
                 stu.Age = 12;
                 Console.WriteLine(stu.Canwork); //False
-                
+
                 stu.Age = 18;
-                Console.WriteLine(stu.Canwork); //True                
+                Console.WriteLine(stu.Canwork); //True
             }
             catch(Exception ex)
             {
@@ -4129,28 +4129,28 @@ namespace ProrertyExample
             }
         }
     }
-    
+
     class Student
     {
         private int age;
-        
-        public int Age 
-        { 
+
+        public int Age
+        {
             get { return age; }
-            set 
-            { 
+            set
+            {
                age = value;
                this.CalcumateCanWork();
             }
         }
-        
+
         private bool canWork;
-        
+
         public bool CanWork
         {
             get { return canWork; }
         }
-        
+
         private void CalcumateCanWork()
         {
             if(this.age>=16)
@@ -4162,7 +4162,7 @@ namespace ProrertyExample
                 this.canWork = false;
             }
         }
-        
+
         public bool CanWork {
             get
             {
@@ -4180,7 +4180,7 @@ namespace ProrertyExample
 }
 ```
 
-`CanWork`容易浪费性能，不如每次在设定值的时候就把`canWork`计算出来，那么相反如果学生age这个值经常被设定，而`canWork`这个值不经常被访问的时候，我们现在这个CalcumateCanWork设计就有点浪费计算机性能了
+`CanWork`容易浪费性能，不如每次在设定值的时候就把`canWork`计算出来，那么相反如果学生 age 这个值经常被设定，而`canWork`这个值不经常被访问的时候，我们现在这个 CalcumateCanWork 设计就有点浪费计算机性能了
 
 ### 索引器
 
@@ -4199,7 +4199,7 @@ namespace IndexerExample
             Console.WriteLine(mathScore); //什么都没有，null
         }
     }
-        
+
     class Student
     {
         private Dictionary<string, int> scoreDictionary = new Dictionary<string, int>();
@@ -4240,16 +4240,16 @@ namespace IndexerExample
 ### 常量
 
 - 什么是常量
-   - 常量（constant）是表示常量值（即，可以在编译时计算的值）的类成员
-   - 常量隶属于类型而不是对象，即没有“实例常量”
-      - “实例常量”的角色由只读实例字段来担当
-   - 注意区分成员常量与局部常量
--  常量的声明
--  各种”只读“的应用场景
-   -  为了提高程序的可读性和执行效率————常量
-   -  为了防止对象的值被改变————只读字段
-   -  向外暴露不允许修改的数据————只读属性（静态或非静态），功能与常量有一些重叠
-   -  当希望成为常量的值其类型不能被常量声明接受时（类/自定义结构体）————静态只读字段
+  - 常量（constant）是表示常量值（即，可以在编译时计算的值）的类成员
+  - 常量隶属于类型而不是对象，即没有“实例常量”
+    - “实例常量”的角色由只读实例字段来担当
+  - 注意区分成员常量与局部常量
+- 常量的声明
+- 各种”只读“的应用场景
+  - 为了提高程序的可读性和执行效率————常量
+  - 为了防止对象的值被改变————只读字段
+  - 向外暴露不允许修改的数据————只读属性（静态或非静态），功能与常量有一些重叠
+  - 当希望成为常量的值其类型不能被常量声明接受时（类/自定义结构体）————静态只读字段
 
 ```c#
 namespace ConstantExample
@@ -4285,7 +4285,7 @@ namespace ConstantExample
             // public const Building Location = new Building("Some Address"); //不能够用类类型或者自定义的结构体类型，来作为常量的类型
             public static readonly Building Location = new Building("Some Address"); //静态只读字段
         }
-        
+
         class Building
         {
             public Building(string address)
@@ -4308,7 +4308,7 @@ namespace ConstantExample
 - 数组参数
 - 具名参数
 - 可选参数
-- 拓展方法（this参数）
+- 拓展方法（this 参数）
 
 ![image-20250307083010435](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250307083010435.png)
 
@@ -4325,7 +4325,7 @@ namespace ParametersExample
             Console.WriteLine(y); // 100
         }
     }
-    
+
     class Student
     {
         public void AddOne(int x)
@@ -4350,13 +4350,13 @@ namespace ParametersExample
             SomeMethod(stu);
             Console.WriteLine("{0}, {1}", stu.GetHashCode(), stu.Name);
         }
-        
+
         static void SomeMethod(Student stu)
         {
             stu = new Student(){Name = "Tim"};
             Console.WriteLine("{0}, {1}", stu.GetHashCode(), stu.Name);
         }
-        
+
         class Student
         {
             public string Name { get; set }
@@ -4365,7 +4365,7 @@ namespace ParametersExample
 }
 ```
 
-`Student stu = new Student(){Name = "Tim"};`中的stu作用域是Main函数方法体，而作为`static void SomeMethod(Student stu)`中的stu作用域是SomeMethod方法体
+`Student stu = new Student(){Name = "Tim"};`中的 stu 作用域是 Main 函数方法体，而作为`static void SomeMethod(Student stu)`中的 stu 作用域是 SomeMethod 方法体
 
 ![image-20250307135007190](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250307135007190.png)
 
@@ -4380,7 +4380,7 @@ namespace ParametersExample
             UpdateObject(stu);
             Console.WriteLine("HashCode={0}, Name={1}", stu.GetHashCode(), stu.Name); //一样
         }
-        
+
         static void SomeMethod(Student stu)
         {
             stu.Name = "Tom"; //副作用，side-effect
@@ -4410,7 +4410,7 @@ namespace ParametersExample
                 Console.WriteLine("Input error!");
                 return;
             }
-            
+
             Console.WriteLine("Please input second number");
             string arg2 = Console.ReadLine();
             double y = 0;
@@ -4420,7 +4420,7 @@ namespace ParametersExample
                 Console.WriteLine("Input error!");
                 return;
             }
-            
+
             double z = x + y;
             Console.WriteLine("{0}+{1}={2}", x, y, z);
         }
@@ -4446,7 +4446,7 @@ namespace ParametersExample
                 Console.WriteLine(x);
             }
         }
-        
+
         class DoubleParser
         {
             public static bool TryParse(string input, out double result)
@@ -4484,13 +4484,13 @@ namespace ParametersExample
             }
         }
     }
-    
+
     class Student
     {
         public int Age { get; set; }
         public string Name { get; set; }
     }
-    
+
     class StudentFactory
     {
         public static bool Create(string stuName, int stuAge, out Student result)
@@ -4500,12 +4500,12 @@ namespace ParametersExample
             {
                 return false;
             }
-            
+
             if(stuAge<20 || stuAge > 80)
             {
                 return false;
             }
-            
+
             result = new Student(){Name = stuName, Age = stuAge};
             return true;
         }
@@ -4515,8 +4515,8 @@ namespace ParametersExample
 
 ### 数组参数
 
-- 必需是形参列表中的最后一个，由params修饰
-- 举例：String.Format方法和String.Split方法
+- 必需是形参列表中的最后一个，由 params 修饰
+- 举例：String.Format 方法和 String.Split 方法
 
 ```c#
 namespace ParametersExample
@@ -4530,7 +4530,7 @@ namespace ParametersExample
             int result = CalculateSum(1, 2, 3);
             Console.WriteLine(result);
         }
-        
+
         static int CalculateSum(params int[] intArray)
         {
             int sum = 0;
@@ -4558,7 +4558,7 @@ namespace ParametersExample
                 Console.WriteLine(name);
             }
         }
-        
+
         static int CalculateSum(params int[] intArray)
         {
             int sum = 0;
@@ -4584,10 +4584,10 @@ namespace ParametersExample
         {
             PrintInfo(name: "Tim", age: 34);
         }
-        
+
         static void PrintInfo(string name, int age)
         {
-            Console.WriteLine("Hello {0}, you are {1}.", name, age); 
+            Console.WriteLine("Hello {0}, you are {1}.", name, age);
         }
     }
 }
@@ -4607,7 +4607,7 @@ namespace ParametersExample
         {
             PrintInfo();
         }
-        
+
         static void PrintInfo(string name = "Tim", int age = 34)
         {
             Console.WriteLine("Hello {0}, you are {1}.", name, age);
@@ -4616,12 +4616,12 @@ namespace ParametersExample
 }
 ```
 
-### 扩展方法（this参数）
+### 扩展方法（this 参数）
 
-- 方法必需是公有、静态的，即被public static所修饰
-- 必需是形参列表中的第一个，由this修饰
-- 必需由一个静态类（一般类名为SomeTypeExtension）来统一收纳对SomeType类型的扩展方法
-- 举例：LINQ方法
+- 方法必需是公有、静态的，即被 public static 所修饰
+- 必需是形参列表中的第一个，由 this 修饰
+- 必需由一个静态类（一般类名为 SomeTypeExtension）来统一收纳对 SomeType 类型的扩展方法
+- 举例：LINQ 方法
 
 ```c#
 namespace ParamatersExample
@@ -4635,7 +4635,7 @@ namespace ParamatersExample
             Console.WriteLine(y);
         }
     }
-    
+
     static class DoubleExtension
     {
         public static double Round(this double input, int digits)
@@ -4643,7 +4643,7 @@ namespace ParamatersExample
             double result = Math.Round(input, digits);
             return result;
         }
-    }   
+    }
 }
 ```
 
@@ -4658,7 +4658,7 @@ namespace ParamterssExample
             bool result = myList.All(i => i > 10); //All扩展方法，存在于Enumerable静态类当中的
             Console.WriteLine(result);
         }
-        
+
         static bool AllGreaterThanTen(List<int> intList)
         {
             foreach(var item in intList)
@@ -4682,7 +4682,7 @@ namespace ParamterssExample
 - 数组参数：用于简化方法的调用
 - 具名参数：提高可读性
 - 可选参数：参数拥有默认值
-- 扩展方法（this参数）：为目标数据类型“追加"方法
+- 扩展方法（this 参数）：为目标数据类型“追加"方法
 
 ## 委托
 
@@ -4690,29 +4690,29 @@ namespace ParamterssExample
 
 什么是委托
 
-   - 委托（delegate）是函数指针的“升级版”
-     
-     - 实例：C/C++中的函数指针
+- 委托（delegate）是函数指针的“升级版”
 
-   - 一切皆地址
+  - 实例：C/C++中的函数指针
 
-     - 变量（数据）是以某个地址为起点的一段内存中所存储的值
+- 一切皆地址
 
-     - 函数（算法）是以某个地址为起点的一段内存中所储存的一组机器语言指令
-     
-   - 直接调用与间接调用
+  - 变量（数据）是以某个地址为起点的一段内存中所存储的值
 
-     - 直接调用：通过函数名来调用函数，CPU通过函数名直接获得函数所在地址并开始执行->返回
+  - 函数（算法）是以某个地址为起点的一段内存中所储存的一组机器语言指令
 
-     - 间接调用：通过函数指针来调用函数，CPU通过读取函数指针存储的值获得函数所在地址并开始执行->返回
+- 直接调用与间接调用
 
-   - Java中没有与委托相对应的功能实体
+  - 直接调用：通过函数名来调用函数，CPU 通过函数名直接获得函数所在地址并开始执行->返回
 
-   - 委托的简单使用
+  - 间接调用：通过函数指针来调用函数，CPU 通过读取函数指针存储的值获得函数所在地址并开始执行->返回
 
-     - Action委托
-     
-     - Func委托
+- Java 中没有与委托相对应的功能实体
+
+- 委托的简单使用
+
+  - Action 委托
+
+  - Func 委托
 
 ```c#
 typedef int(* Calc)(int a, int b);
@@ -4734,16 +4734,16 @@ int main()
     int x = 100;
     int y = 200;
     int z = 0;
-    
+
     Calc = funcPoint1 = &Add;
     Calc = funcPoint2 = &Sub;
-    
+
     z = funcPoint1(x, y);
     printf("%d+%d=%d\n", x, y, z);
-    
+
     z = funcPoint2(x, y);
     printf("%d-%d=%d\n", x, y, z);
-    
+
     system("pause");
     return 0;
 }
@@ -4761,24 +4761,24 @@ namespace DelegateExample
             calculator.Report();
             action.Invoke();
             action();
-            
+
             Func<
         }
     }
-    
+
     class Calculator
     {
         public void Report()
         {
             Console.WriteLine("I have 3 methods.")
         }
-        
+
         public int Add(int a, int b)
         {
             int result = a + b;
             return result;
         }
-        
+
         public int Sub(int a, int b)
         {
             int result = a - b;
@@ -4787,4 +4787,3 @@ namespace DelegateExample
     }
 }
 ```
-

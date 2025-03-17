@@ -18,9 +18,9 @@ description: >
 
 为弥补无法使用远程服务器的不足以及熟悉 linux 命令行的需求，在此推荐 [bandit](https://overthewire.org/wargames/bandit/) 。bandit 是一款来自 OverTheWire 网站的 Wargame，为 CTF 爱好者提供免费的练习靶场。bandit 的前 15 个 level 都是基础的 linux 操作而不涉及任何 CTF 知识。这些练习也正好弥补了 DeCal 外校无法访问的部分（主要是远程链接、文件权限）等内容。
 
-# Bandit
+## Bandit
 
-## Level 0
+### Level 0
 
 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is **bandit.labs.overthewire.org**, on port 2220. The username is **bandit0** and the password is **bandit0**. Once logged in, go to the [Level 1](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat Level 1.【此级别的目标是让您使用 SSH 登录游戏。 您需要连接的主机是 **bandit.labs.overthewire.org**，在端口 2220 上。用户名是 **bandit0**，密码是 **bandit0**。登录后，转到 [Level 1](https://overthewire.org/wargames/bandit/bandit1.html) 页面以了解如何通过 Level 1。】
 
@@ -28,7 +28,7 @@ The goal of this level is for you to log into the game using SSH. The host to wh
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
 
-## Level 0 → Level 1
+### Level 0 → Level 1
 
 The password for the next level is stored in a file called **readme** located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.【下一级的密码存储在名为 **自述文件**位于 HOME 目录中。使用此密码通过 SSH 登录 bandit1。每当您找到某个关卡的密码时，请使用 SSH（在端口 2220 上）登录该关卡并继续游戏。】
 
@@ -64,7 +64,7 @@ Connection to bandit.labs.overthewire.org closed.
 等待输入超时：自动注销
 与 bandit.labs.overthewire.org 的连接已关闭。】
 
-## Level 1 → Level 2
+### Level 1 → Level 2
 
 The password for the next level is stored in a file called **-** located in the home directory【下一级的密码存储在名为 **-** 位于主目录中】
 
@@ -76,7 +76,7 @@ cat ./-
 
 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
-## Level 2 → Level 3
+### Level 2 → Level 3
 
 The password for the next level is stored in a file called **spaces in this filename** located in the home directory【下一级的密码存储在主目录中名为 **spaces 的文件中**】
 
@@ -92,7 +92,7 @@ cat 'spaces in this filename'
 
 MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 
-## Level 3 → Level 4
+### Level 3 → Level 4
 
 The password for the next level is stored in a hidden file in the **inhere** directory.【下一级的密码存储在 **inhere** 目录中。】
 
@@ -120,7 +120,7 @@ cat ...Hiding-From-You
 
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
-## Level 4 → Level 5
+### Level 4 → Level 5
 
 The password for the next level is stored in the only human-readable file in the **inhere** directory. Tip: if your terminal is messed up, try the “reset” command.【下一级的密码存储在 **inhere** 目录中唯一可读的文件中。提示： 如果您的终端搞砸了，请尝试 “reset” 命令。】
 
@@ -149,7 +149,7 @@ cat ./-file07
 
 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
-## Level 5 → Level 6
+### Level 5 → Level 6
 
 The password for the next level is stored in a file somewhere under the **inhere** directory and has all of the following properties:【下一级的密码存储在 **inhere** 目录下某个位置的文件中，并具有以下所有属性：】
 
@@ -304,7 +304,7 @@ cat ./maybehere07/.file2
 
 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
-## Level 6 → Level 7
+### Level 6 → Level 7
 
 The password for the next level is stored **somewhere on the server** and has all of the following properties:【下一级的密码存储在**服务器上的某个位置，**并具有以下所有属性：】
 
@@ -440,7 +440,7 @@ cat /var/lib/dpkg/info/bandit7.password
 
 morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
-## Level 7 → Level 8
+### Level 7 → Level 8
 
 The password for the next level is stored in the file **data.txt** next to the word **millionth**【下一级的密码存储在文件**data.txt** 在单词 **millionth** 旁边】
 
@@ -450,7 +450,7 @@ grep '^millionth' data.txt
 
 dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
-## Level 8 → Level 9
+### Level 8 → Level 9
 
 The password for the next level is stored in the file **data.txt** and is the only line of text that occurs only once【下一级的密码存储在文件**data.txt** 并且是唯一只出现一次的文本行】
 
@@ -460,261 +460,13 @@ cat data.txt | sort | uniq -u
 
 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
-## Level 9 → Level 10
+### Level 9 → Level 10
 
 The password for the next level is stored in the file **data.txt** in one of the few human-readable strings, preceded by several ‘=’ characters.【下一级的密码存储在文件**data.txt** 在为数不多的人类可读字符串之一中，前面有几个 '=' 字符。】
 
 ```bash
 cat data.txt | strings
 ```
-
-h!]v
-r>)1
-v0i)b
-B:PyZ
-#0/u
-dyaE
-F#X[
-7$'0'T
-^^^K
-Y5}|
-9g_$
-^h#%EG
-Fq/
-/OZ[4'
-D#?P
-POl%
-}========== the
-db*Nz
-cc5M
-`oaT
-E:zr0
-!S:%_
-yG@q-
--c5N
-xHp\
-wS>n
-^B~9
-Q!vw
-'5jl
-. \,
-66exg
-h^Ad
-,`Cd80
-UB;N
-U@j?
-p\l=
-te24
-UNvlE
-U%^6
-JB]H:|v
-|M '
-{QMrWv
-8:% XD
-H"hU
-/uP\_
-(mhY
-+6,hH
-4vjm4
-q09B
-^8NSs
-2>X)
-Y>v4
-lKUO
-U>QkM:,V
-imZ?L
-
-> ^?X
-> ;c<Q=.dEXU!
-> j!ZL
-> jX09
-> 5bBK
-> 4Rl*7gH
-> F 4Cq
-> #61QW
-> hqI.X
-> 3JprD========== passwordi
-> 7`4(WG
-& `T
-> \_eOdY
-> G>Wu}
-> o|)s
-> z_b^
-> HCg\@0
-> z8N*-Z`
-v7\y
-s>|5
-!$L&
-Qm1U
-JH|)
-qi{|p
-Yy6]
-BWu7
-qC(=
-"t<2-u
-i)W5
-Czmnf&v
-TO"'
-~fDV3========== is
-R<+{
-)DtZ
-)>tgdu
-FvkY
-Z)w,
-|:H5
-I;j@
-0V[1
-d_hnA;
-oH`w
-> 7=oc
-> _N]d
-> 3>\kGG
-> drfx
-> }UQB
-> uP6{
-> hu%lLj
-> F>x!&
-> [^?_
-> M<ls%
-> "kz8I
-> zP=
-> 6o+u
-> piUv
-> a*xX$
->%!~D
->xfvO
->Oq.g
->(p^A
->-45c
->^w#K
->FP&!
->ba+D
->n.i3m
->GMKB
->#s}t
->K>]`c
->sn)>
->v8jB
->"x|L
->}ZIg
->r~rB
->+_38
->Z@bj:
->~de=
->.sjd
->  qT\
->T`q
->Ylyg<
->t1QAk
->@99F
->oxGz$W~"
-> 9+`1
-_$>S
-J]epm
-pfT8
-I`8l
-> fL'~\_
-> a Z
-> DT[N
-> z9wo
-> 5Gfy
-> "}@>bn
-> O(k$N
->zw[@
->!a5^
->9Z8]
->sqEAj
->D)A'r
->an      g
->'3pp(
->s(-Qv
->3k=fQ
->usTR
->Nyz3wI
->+)&_i
->WDp8
->u"o~
->p(67
->WZ+(
->?o&g
->k        `
->~o=0
->6+$N
-> :'3z
-> uJw&
-> &kIIJ
-> b4glu
-> ]NJR
-> %uW
-> |r_s
-> zVw-
-> Q$QBW
-> Q{h%w
-> 69}=
-> ?uPsH
-> @WG|
-> %"=Y
-> Pew%J
-> &3[2
-> *u;(%P
-> dA`d
-|>,p
-oY%\
-3W`j
-> D+io?
-> =tZ~07
-> ^6Og
-> Tx+X
-> rs2J
-> -M8<
-> Dq^B
-> Qv"Y
-> fk)B
-> g+;Y
-> Uum
-> D9========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
-> u1Ebi
-> &x(>G
-> .`EQ
-w>}x
-D%(f
-1#4!9
-:79(
-m!}B
-| Zd
-qQ>Gu
-!6D(
-J?,2
-IEO*
-uu>@    ;
-KrQ!
-$V8a
-{vl0pup
-AWwyxY
-j(ue
-X<'j
-<HR]/
-7!`tcT7
-> Gp(2
-> FoOvx
-> hF|W
-> 3edvE%
-> _#@k
-> N=~[!N
-> -VSe
-> a0XJ
-> 3;8_
-> zA=?0j
-> b}M>s
-> %Xi-
-> Qobt
-> 6Cjk
-> H`U ^
-> +v J
-> 4(clh~U
-> #R^g
-> Xgz|
-> )oRj
 
 FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 
