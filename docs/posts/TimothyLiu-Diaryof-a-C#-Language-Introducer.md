@@ -55,15 +55,15 @@ namespace HelloWorld
 - 对象也叫实例，是类经过"实例化"后得到的内存中的实体
 
       Formally"instance”is synonymous with"object"一一对象和实例是一回事
-    
+        
       "飞机"与"一架飞机"有何区别？天上有（一架）飞机一一必需是实例飞，概念是不能飞的
-    
+        
       有些类是不能实例化的，比如"数学”（Math class），我们不能说“一个数学
 
 - 依照类，我们门可以创建对象，这就是“实例化
 
       现实世界中常称"对象”，程序世界中常称"实例”
-    
+        
       二者并无太大区别，常常混用，初学者不必迷惑
 
 - 使用 new 操作符创建类的实例
@@ -106,13 +106,13 @@ namespace ClassAndInstance
 - 方法（Method）
 
       由 C 语言中的函数（function）进化而来，表示类或对象“能做什么”
-    
+        
       工作中 90%的时间是在与方法打交道，因为它是“真正做事”、“构成逻辑“的成员
 
 - 事件（Event）
 
       类或对象通知其它类或对象的机制，为 C#所特有（Java 通过其它办法实现这个机制）
-    
+        
       善用事件机制非常重要
 
 - 使用 MSDN 文档（鼠标移到某个类上，按下 F1）
@@ -281,13 +281,13 @@ namespace IdentifiersExample
 - 变量是存放数据的地方，简称“数据
 
       变量的声明
-    
+        
       变量的使用
 
 - 方法（旧称函数）是处理数据的逻辑，又称"算法
 
       方法白声明
-    
+        
       方法的调用
 
 - 程序=数据+算法
@@ -4762,7 +4762,17 @@ namespace DelegateExample
             action.Invoke();
             action();
 
-            Func<
+            Func<int, int, int> func1 = new Func<int, int, int>(calculator.Add);
+            Func<int, int, int> func2 = new Func<int, int, int>(calculator.Sub);
+            
+            int x = 100;
+            int y = 200;
+            int z = 0;
+            
+            z = func1.Invoke(x, y);// z = func1(x, y);
+            Console.WriteLine(z);// 300
+            z = func2,Invoke(x, y);// z = func2(x, y);
+            Console.WriteLine(z);// -100
         }
     }
 
@@ -4787,3 +4797,70 @@ namespace DelegateExample
     }
 }
 ```
+
+### 自定义委托
+
+- 委托是一种类（class），类是数据类型所以委托也是一种数据类型
+- 它的声名方式与一般的类不同，主要是为了照顾可读性和C/C++传统
+- 注意声名委托的位置
+  - 避免写错地方结果声名成嵌套类型
+- 委托与所封装的方法必须"类型兼容"  
+
+![image-20250322104957705](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250322104957705.png)
+
+
+```c#
+namespace DelegateExample
+{
+    public delegate double Calc(double x, double y);
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculator calculator = new Calculator();
+            Calc calc1 = new Calc(calculator.Add);
+            Calc calc2 = new Calc(calculator.Sub);
+            Calc calc3 = new Calc(calculator.Mul);
+            Calc calc4 = new Calc(calculator.Div);
+            
+            double a = 100;
+            double b = 200;
+            double c = 0;
+            
+            c = calc1.Invoke(a, b);
+            Console.WriteLine(c); //300
+            c = calc2.Invoke(a, b);
+            Console.WriteLine(c); //-100
+            c = calc3.Invoke(a, b);
+            Console.WriteLine(c); //20000
+            c = calc4.Invoke(a, b);
+            Console.WriteLine(c); //0.5            
+        }
+    }
+    
+    class Calculator
+    {
+        public double Add(double x, double y)
+        {
+            return x + y;
+        }
+        
+        public double Sub(double x, double y)
+        {
+            return x - y;
+        }
+        
+        public double Mul(double x, double y)
+        {
+            return x * y;
+        }
+        
+        public double Div(double x, double y)
+        {
+            return x / y;
+        }
+    }
+}
+```
+
